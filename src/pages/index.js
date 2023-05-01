@@ -7,9 +7,9 @@ import About from '../../Components/About'
 import Skill from '../../Components/Skill'
 import Projects from '../../Components/Projects'
 import Papers from '../../Components/Papers'
-// import Contact from '../../Components/Contact'
+import Contact from '../../Components/Contact'
 import TimelineSection from '../../Components/TimelineSection'
-// import Footer from '../../Components/Footer'
+import Footer from '../../Components/Footer'
 
 
 
@@ -32,8 +32,8 @@ export default function Home() {
       <Projects />
       <Papers />
       <TimelineSection />
-      {/* <Contact />
-      <Footer /> */}
+      <Contact />
+      <Footer />
 
 
     </>
