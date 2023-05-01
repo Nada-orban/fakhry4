@@ -1,4 +1,4 @@
-import '@/styles/globals.css'
+import '../styles/globals.css'
 import { ThemeProvider, CssBaseline } from '@mui/material';
 import { ColorModeContext, useMode } from '../../public/theme'
 import { styled, useTheme, alpha } from '@mui/material/styles';
