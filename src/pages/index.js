@@ -4,11 +4,11 @@ import { Inter } from 'next/font/google'
 import styles from '../styles/Home.module.css'
 // import Landing from '../../Components/Landing'
 import About from '../../Components/About'
-// import Skill from '../../Components/Skill'
-// import Projects from '../../Components/Projects'
-// import Papers from '../../Components/Papers'
+import Skill from '../../Components/Skill'
+import Projects from '../../Components/Projects'
+import Papers from '../../Components/Papers'
 // import Contact from '../../Components/Contact'
-// import TimelineSection from '../../Components/TimelineSection'
+import TimelineSection from '../../Components/TimelineSection'
 // import Footer from '../../Components/Footer'
 
 
@@ -28,11 +28,11 @@ export default function Home() {
       </Head>
       {/* <Landing /> */}
       <About />
-      {/* <Skill />
+      <Skill />
       <Projects />
       <Papers />
       <TimelineSection />
-      <Contact />
+      {/* <Contact />
       <Footer /> */}
 
 
