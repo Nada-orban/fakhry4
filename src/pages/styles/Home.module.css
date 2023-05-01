@@ -1,0 +1,95 @@
+.Landing{
+  background-image: url("../../public/assets/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:linear-gradient(to bottom,rgba(8, 8, 8, 0.74),rgba(39, 39, 39, 0.13));
+  z-index: 2;
+  cursor: pointer;
+  
+  
+  
+}
+/* #############about##############3 */
+.iconContact {
+  color:white;
+  background-color: black;
+  cursor: pointer;
+}
+
+.iconContact:hover {
+  color:white;
+  background-color:var(--secondary-color);
+  transition: all .5s ease-in-out;
+  transform: scale(1.3);
+}
+
+
+/*###################projects############*/
+.projectBox{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 'center';
+  background-image:linear-gradient(to bottom, #00000080, rgba(83, 81, 81, 0.678)),url(../../public/assets/ai-nuclear-energy-background-future-innovation-disruptive-technology.jpg);
+  width: 100%;
+  height: 250px;
+  padding: 50px 20px;
+  color: white;
+  /* border-radius: 10px; */
+  transition: all .5s ease-in-out;
+  
+}
+.projectBox:hover{
+  transform: scale(.9);
+  background-image:linear-gradient(to bottom, #00000080, rgba(24, 163, 218, 0.829)),
+  url(../../public/assets//ai-nuclear-energy-background-future-innovation-disruptive-technology.jpg);
+
+
+
+}
+.normalButton{
+  width: 200px;
+  margin: auto;
+  padding: 20px;
+  margin-top: 30px;
+  font-size: larger;
+  background-color: #212529;
+  border-style: none;
+  color: white;
+  border-radius: 10px;
+}
+
+
+/*############Papers############ */
+.linkText:hover{
+  text-decoration: underline var(--secondary-color);
+}
+.iconLink:hover{
+  color: #c7933a;
+}
+
+/*############contact ############*/
+.contactBox{
+  text-align: center;
+  color: white;
+  background-image:linear-gradient(to bottom, #00000080, rgba(83, 81, 81, 0.678)),
+  url(../../public/assets/close-up-man-checking-mobile.jpg); 
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  
+
+}

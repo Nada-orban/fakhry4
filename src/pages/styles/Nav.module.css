@@ -1,0 +1,47 @@
+.menuButton:hover{
+    border: 1px solid white;
+    background-color: var(--secondary-color);
+    color: black;
+
+}
+.navLink:hover, .navLink:active{
+    color: var(--secondary-color);
+
+}
+.menuBox{
+    /* transition: all 1s ease 0s,visibility 0s linear .3s;
+    position: absolute;
+    top: 50px;
+    right: 0px;
+    left: 0px;
+    transform: translateY(-100px); */
+    
+
+
+}
+
+
+
+.icon{
+    color :white
+
+}
+
+/* @keyframes react-reveal-373047938003920-2{
+    0% {
+        
+        left: 0px;
+        top: 0px;
+    }
+
+    25% {
+        
+        left: 200px;
+        top: 0px;
+    }
+
+} */
+.drawer_icon:hover{
+    color: black;
+    background-color: #ef5350;
+}
