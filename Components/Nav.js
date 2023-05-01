@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { makeStyles } from '@material-ui/core/styles';
+// import { makeStyles } from '@material-ui/core/styles';
 import NightlightRoundIcon from '@mui/icons-material/NightlightRound';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import AppBar from '@mui/material/AppBar';
@@ -98,16 +98,16 @@ ScrollTop.propTypes = {
 
 
 
-const useStyles = makeStyles((theme) => ({
-    appBarTransparent: {
-        backgroundColor: 'transparent',
+// const useStyles = makeStyles((theme) => ({
+//     appBarTransparent: {
+//         backgroundColor: 'transparent',
 
-    },
-    appBarSolid: {
-        backgroundColor: '#212529',
+//     },
+//     appBarSolid: {
+//         backgroundColor: '#212529',
 
-    }
-}));
+//     }
+// }));
 
 
 function Nav(props) {
@@ -121,24 +121,24 @@ function Nav(props) {
 
 
     // Transparent to Solid Header on Scroll
-    const classes = useStyles();
-    const [navBackground, setNavBackground] = useState('appBarTransparent')
-    const navRef = React.useRef()
-    navRef.current = navBackground;
-    useEffect(() => {
-        const handleScroll = () => {
-            const show = window.scrollY > 310
-            if (show) {
-                setNavBackground('appBarSolid')
-            } else {
-                setNavBackground('appBarTransparent')
-            }
-        }
-        document.addEventListener('scroll', handleScroll)
-        return () => {
-            document.removeEventListener('scroll', handleScroll)
-        }
-    }, [])
+    // const classes = useStyles();
+    // const [navBackground, setNavBackground] = useState('appBarTransparent')
+    // const navRef = React.useRef()
+    // navRef.current = navBackground;
+    // useEffect(() => {
+    //     const handleScroll = () => {
+    //         const show = window.scrollY > 310
+    //         if (show) {
+    //             setNavBackground('appBarSolid')
+    //         } else {
+    //             setNavBackground('appBarTransparent')
+    //         }
+    //     }
+    //     document.addEventListener('scroll', handleScroll)
+    //     return () => {
+    //         document.removeEventListener('scroll', handleScroll)
+    //     }
+    // }, [])
 
 
 
@@ -165,7 +165,7 @@ function Nav(props) {
 
 
 
-
+    //className={classes[navRef.current]} 
 
     return (
         <>
@@ -174,7 +174,7 @@ function Nav(props) {
 
                 <AppBar variant="permanent" position="fixed" sx={{
                     background: 'transparent', color: "text:primary", borderStyle: "none", height: "60px"
-                }} className={classes[navRef.current]} >
+                }} >
                     <Container>
                         <Toolbar>
                             <Box display='flex' flexGrow={1}>
