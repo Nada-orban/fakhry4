@@ -14,13 +14,10 @@ export default function App({ Component, pageProps }) {
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-
         <Component {...pageProps} />
         <style jsx global>{`
               ${theme.palette.mode === 'dark' ? "body{background:#1c1d24} " : "body{background: #fff} "}`
         }</style>
-
-
       </ThemeProvider>
     </ColorModeContext.Provider>
 
