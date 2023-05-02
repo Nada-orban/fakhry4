@@ -173,7 +173,7 @@ function Nav(props) {
                 <CssBaseline />
 
                 <AppBar variant="permanent" position="fixed" sx={{
-                    background: '#212529', color: "text:primary", borderStyle: "none", height: "60px"
+                    background: 'black', color: "text:primary", borderStyle: "none", height: "60px"
                 }} >
                     <Container>
                         <Toolbar>
@@ -196,7 +196,7 @@ function Nav(props) {
                                 <Box sx={{ display: { xs: "none", sm: 'none', md: 'block', } }}>
                                     <List sx={{ display: "flex" }}>
                                         <ListItem className={Styles.navLink}>
-                                            <Link to="about" spy={true} smooth={true} offset={-50} duration={500} >
+                                            <Link to="about" spy={true} smooth={true} offset={-50} duration={500}  >
                                                 <ListItemText primary="ABOUT" />
                                             </Link>
                                         </ListItem>
@@ -265,7 +265,7 @@ function Nav(props) {
                 </Box> */}
                 {/* mobile view 1*/}
 
-                <AppBar variant="permanent" position="fixed" sx={{ display: { md: 'none', sm: 'block' }, backgroundColor: "#212529" }}>
+                <AppBar variant="permanent" position="fixed" sx={{ display: { md: 'none', sm: 'block' }, backgroundColor: "black" }}>
                     <Container>
                         <Toolbar >
                             <Box display='flex' flexGrow={1} >

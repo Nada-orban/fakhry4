@@ -4,7 +4,12 @@
     color: black;
 
 }
-.navLink:hover, .navLink:active{
+.navLink.active{
+    color: var(--secondary-color);
+    
+
+}
+.navLink:hover{
     color: var(--secondary-color);
 
 }
