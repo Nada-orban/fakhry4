@@ -49,17 +49,33 @@ function Contact() {
                 <form onSubmit={handleSubmit}  >
                     <Grid container spacing={4} sx={{ my: 4 }}>
                         <Grid item xs={12} md={6} sx={{ display: "flex", flexDirection: "column", justifyContent: "space-between", gap: "40px" }}>
-                            <ValidationTextField
+                            {/* <TextField
+                                variant="filled"
                                 label="Name"
                                 required
                                 id="validation-outlined-input"
-                                variant="outlined"
+                                sx={{ '& .css-f74dlt-MuiInputBase-root-MuiFilledInput-root.Mui-focused': { backgroundColor: "white" } }}
                             // id="name"
                             // name='name'
                             // label="Name"
                             // color="secondary"
                             // focused
                             // InputLabelProps={{ style: { fontSize: 23, marginTop: -15, marginLeft: -10 } }}
+
+
+                            /> */}
+
+                            <TextField
+                                sx={{ '& .css-14m6kzo-MuiInputBase-root-MuiFilledInput-root.Mui-focused': { backgroundColor: "white" } }}
+                                id="name"
+                                name="name"
+                                type="name"
+                                label="Name"
+                                variant="filled"
+                                color="secondary"
+                                focused
+
+
 
 
                             />
@@ -69,11 +85,12 @@ function Contact() {
                                 errors={state.errors}
                             />
                             <TextField
+                                sx={{ '& .css-14m6kzo-MuiInputBase-root-MuiFilledInput-root.Mui-focused': { backgroundColor: "white" } }}
                                 id="email"
                                 name="email"
                                 type="email"
                                 label="Email"
-
+                                variant="filled"
                                 color="secondary"
                                 focused
 
@@ -95,12 +112,14 @@ function Contact() {
                         </Grid>
                         <Grid item xs={12} md={6} sx={{ display: "flex", flexDirection: "column", justifyContent: "space-between", gap: "40px" }}>
                             <TextField
+
                                 id="message"
                                 name="message"
                                 label="Message"
                                 color="secondary"
+                                variant="outlined"
                                 multiline
-                                rows={4}
+                                rows={6}
                                 focused
 
 

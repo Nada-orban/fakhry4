@@ -173,7 +173,7 @@ function Nav(props) {
                 <CssBaseline />
 
                 <AppBar variant="permanent" position="fixed" sx={{
-                    background: 'transparent', color: "text:primary", borderStyle: "none", height: "60px"
+                    background: '#212529', color: "text:primary", borderStyle: "none", height: "60px"
                 }} >
                     <Container>
                         <Toolbar>
@@ -196,32 +196,32 @@ function Nav(props) {
                                 <Box sx={{ display: { xs: "none", sm: 'none', md: 'block', } }}>
                                     <List sx={{ display: "flex" }}>
                                         <ListItem className={Styles.navLink}>
-                                            <Link to="about" spy={true} smooth={true} offset={-100} duration={500} >
+                                            <Link to="about" spy={true} smooth={true} offset={-50} duration={500} >
                                                 <ListItemText primary="ABOUT" />
                                             </Link>
                                         </ListItem>
                                         <ListItem className={Styles.navLink}>
-                                            <Link to="skills" spy={true} smooth={true} offset={-100} duration={500} >
+                                            <Link to="skill" spy={true} smooth={true} offset={-50} duration={500} >
                                                 <ListItemText primary="SKILLS" />
                                             </Link>
                                         </ListItem>
                                         <ListItem className={Styles.navLink}>
-                                            <Link to="projects" spy={true} smooth={true} offset={-100} duration={500} >
+                                            <Link to="projects" spy={true} smooth={true} offset={-50} duration={500} >
                                                 <ListItemText primary="PROJECTS" />
                                             </Link>
                                         </ListItem>
                                         <ListItem className={Styles.navLink}>
-                                            <Link to="papers" spy={true} smooth={true} offset={-100} duration={500} >
+                                            <Link to="papers" spy={true} smooth={true} offset={-50} duration={500} >
                                                 <ListItemText primary="PAPERS" />
                                             </Link>
                                         </ListItem>
                                         <ListItem className={Styles.navLink}>
-                                            <Link to="timeline" spy={true} smooth={true} offset={-110} duration={500} >
+                                            <Link to="timeline" spy={true} smooth={true} offset={-50} duration={500} >
                                                 <ListItemText primary="TIMELINE" />
                                             </Link>
                                         </ListItem>
                                         <ListItem className={Styles.navLink}>
-                                            <Link to="contact" spy={true} smooth={true} offset={-100} duration={500} >
+                                            <Link to="contact" spy={true} smooth={true} offset={-50} duration={500} >
                                                 <ListItemText primary="CONTACT" />
                                             </Link>
                                         </ListItem>
