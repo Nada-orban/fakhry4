@@ -270,8 +270,8 @@ function Nav(props) {
                         <Toolbar >
                             <Box display='flex' flexGrow={1} >
                                 <Typography
-                                    variant="h4"
-                                    sx={{ flexGrow: 1, display: { xs: 'block', sm: 'block' }, color: "secondary.main", mt: 1 }}
+                                    variant="h5"
+                                    sx={{ flexGrow: 1, display: { xs: 'block', sm: 'block' }, color: "secondary.main", mt: 1, fontSize: "25px" }}
                                 >
                                     Ahmed Fakhry
                                 </Typography>

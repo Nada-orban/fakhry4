@@ -7,6 +7,10 @@
   height: 100vh;
   position: relative;
 }
+.landingInfoBox{
+  padding-top: 30vh;
+}
+
 .overlay {
   position: absolute;
   width: 100%;
@@ -21,6 +25,16 @@
   
   
   
+}
+
+@media (max-width:480px){
+ 
+  .landingInfoBox {
+    padding-top: 18vh;
+    
+
+
+  }
 }
 /* #############about##############3 */
 .iconContact {

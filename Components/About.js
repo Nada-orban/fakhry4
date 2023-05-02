@@ -22,7 +22,7 @@ function About() {
         <Box id="about" py="15vh" className={styles.aboutbackground} sx={{ width: "100vw" }} >
             <Container>
                 <Grid container spacing={3}>
-                    <Grid item md={4} xs={12} sx={{ mb: 3, display: "flex", flexDirection: "column", justifyContent: "center" }} >
+                    <Grid item md={4} xs={12} sx={{ mb: 3, display: { xs: "none", sm: "flex" }, flexDirection: "column", justifyContent: "center" }} >
                         {/* <Lottie animationData={jsonfile} /> */}
                         <div data-aos="zoom-in"
                             data-aos-mirror="true"
