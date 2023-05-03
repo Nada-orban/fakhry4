@@ -10,11 +10,19 @@ import Papers from '../../Components/Papers'
 import Contact from '../../Components/Contact'
 import TimelineSection from '../../Components/TimelineSection'
 import Footer from '../../Components/Footer'
+import React from 'react'
+import { Box, Tabs, Tab, Typography, LinkTab, Grid, Button, Container, Paper, List, ListItem, ListItemText, ListItemIcon, Avatar, } from '@mui/material'
+import { ColorModeContext } from '../../public/theme'
+import { styled, useTheme, alpha } from '@mui/material/styles';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import { projectsdata } from '../../data'
 
 
 
 
-export default function Home() {
+export default function Home({ projects }) {
+  const colorMode = React.useContext(ColorModeContext);
+  const theme = useTheme();
   return (
     <>
       <Head>
@@ -29,7 +37,48 @@ export default function Home() {
       <Landing />
       <About />
       <Skill />
-      <Projects />
+      {/* //projects section */}
+      <Box id='projects' py="50px" my="50px">
+        <Container>
+          <Typography variant='h2' sx={{ textAlign: "center", fontWeight: "bold" }}>Personal Projects</Typography>
+          <Typography variant='h6' sx={{ textAlign: "center" }}>Here you can see some of the projects I've done on my own time.</Typography>
+          <Grid container sx={{ my: "50px" }} spacing={3}>
+            {projects.map(project => (
+              <Projects key={project.id} {...project} />
+
+            ))}
+            {/* <Grid item xs={12} md={4}>
+              <Box className={styles.projectBox}>
+                <Typography variant='h5' sx={{ color: "secondary.main" }}>Project Title</Typography>
+                <Typography variant='h6'>A collection of various neural network models in TensorFlow.</Typography>
+              </Box>
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <Box className={styles.projectBox}>
+                <Typography variant='h5' sx={{ color: "secondary.main" }}>Project Title</Typography>
+                <Typography variant='h6'>A collection of various neural network models in TensorFlow.</Typography>
+              </Box>
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <Box className={styles.projectBox}>
+                <Typography variant='h5' sx={{ color: "secondary.main" }}>Project Title</Typography>
+                <Typography variant='h6'>A collection of various neural network models in TensorFlow.</Typography>
+              </Box>
+            </Grid> */}
+          </Grid>
+          <Box display='flex' justifyContent="center" flexDirection="column" textAlign="center" marginTop="10px">
+            <Typography variant='h4'>To see more of my projects...</Typography>
+            <button className={styles.normalButton}><a href=''>Visit My GitHub<GitHubIcon /></a></button>
+          </Box>
+        </Container>
+      </Box>
+
+
+
+
+
+
+
       <Papers />
       <TimelineSection />
       <Contact />
@@ -38,4 +87,15 @@ export default function Home() {
 
     </>
   )
+}
+
+export const getStaticProps = async () => {
+  // const res = await fetch("data.projects?_limit=2");
+  // const data = await res.json();
+
+  return {
+    props: {
+      projects: projectsdata,
+    }
+  }
 }

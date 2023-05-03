@@ -36,16 +36,16 @@ function Landing() {
                                 <Avatar className={styles.iconContact}  ><FacebookIcon /></Avatar>
                             </a> */}
                         <a href=''>
-                            <Avatar className={styles.iconContact} sx={{ backgroundColor: "black" }}  ><GitHubIcon /></Avatar>
+                            <Avatar className={styles.iconContact}   ><GitHubIcon /></Avatar>
                         </a>
                         <a href=''>
-                            <Avatar className={styles.iconContact} sx={{ backgroundColor: "black" }}  ><LinkedInIcon /></Avatar></a>
+                            <Avatar className={styles.iconContact}   ><LinkedInIcon /></Avatar></a>
                         <a href=''>
-                            <Avatar className={styles.iconContact} sx={{ backgroundColor: "black" }}  >< WhatsAppIcon /></Avatar>
+                            <Avatar className={styles.iconContact}   >< WhatsAppIcon /></Avatar>
                         </a>
 
                         <a href=''>
-                            <Avatar className={styles.iconContact} sx={{ backgroundColor: "black" }}  ><EmailIcon /></Avatar>
+                            <Avatar className={styles.iconContact}   ><EmailIcon /></Avatar>
                         </a>
 
                     </Box>

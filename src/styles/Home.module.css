@@ -10,6 +10,10 @@
 .landingInfoBox{
   padding-top: 30vh;
 }
+.mylink{
+  border-bottom: 1px solid #616161;
+
+}
 
 .overlay {
   position: absolute;
