@@ -35,14 +35,14 @@ function Contact() {
                 <Typography variant='h2' sx={{ textAlign: "center", fontWeight: "bold", my: 4 }}>Contact Me</Typography>
                 <Box display="flex" justifyContent="center" justifyItems="center">
                     <Typography variant='h5' >Email:</Typography>
-                    <Link href=""  >
-                        <Typography variant='h5' sx={{ color: "secondary.main" }} className={styles.linkText}>nadasamir9334@gmail.com</Typography>
+                    <Link href="mailto:ahmedfakhry805@gmail.com"  >
+                        <Typography variant='h5' sx={{ color: "secondary.main" }} className={styles.linkText}> ahmedfakhry805@gmail.com</Typography>
                     </Link>
                 </Box>
                 <Box display="flex" justifyContent="center">
                     <Typography variant='h5' >Phone:</Typography>
                     <Link href=""  >
-                        <Typography variant='h5' sx={{ color: "secondary.main" }} className={styles.linkText}>456-789-5678</Typography>
+                        <Typography variant='h5' sx={{ color: "secondary.main" }} className={styles.linkText}>(+20) 10-9813-0059</Typography>
                     </Link>
                 </Box>
                 <Typography variant='h6'>...or use the following form</Typography>
@@ -66,14 +66,22 @@ function Contact() {
                             /> */}
 
                             <TextField
-                                sx={{ '& .css-14m6kzo-MuiInputBase-root-MuiFilledInput-root.Mui-focused': { backgroundColor: "neutral.white" } }}
+                                // sx={{ '& .css-14m6kzo-MuiInputBase-root-MuiFilledInput-root.Mui-focused': { backgroundColor: "neutral.white" } }}
                                 id="name"
                                 name="name"
                                 type="name"
                                 label="Name"
                                 variant="filled"
                                 color="secondary"
-                                focused
+                                style={{
+                                    backgroundColor: "white"
+                                }}
+                                InputProps={{
+                                    style: {
+                                        color: "black"
+                                    }
+                                }}
+                                f
 
 
 
@@ -85,14 +93,22 @@ function Contact() {
                                 errors={state.errors}
                             />
                             <TextField
-                                sx={{ '& .css-14m6kzo-MuiInputBase-root-MuiFilledInput-root.Mui-focused': { backgroundColor: "neutral.white" } }}
+
                                 id="email"
                                 name="email"
                                 type="email"
                                 label="Email"
                                 variant="filled"
                                 color="secondary"
-                                focused
+
+                                style={{
+                                    backgroundColor: "white"
+                                }}
+                                InputProps={{
+                                    style: {
+                                        color: "black"
+                                    }
+                                }}
 
 
 
@@ -112,7 +128,7 @@ function Contact() {
                         </Grid>
                         <Grid item xs={12} md={6} sx={{ display: "flex", flexDirection: "column", justifyContent: "space-between", gap: "40px" }}>
                             <TextField
-                                sx={{ '& .css-14m6kzo-MuiInputBase-root-MuiFilledInput-root.Mui-focused': { backgroundColor: "neutral.white" } }}
+
                                 id="message"
                                 name="message"
                                 label="Message"
@@ -120,7 +136,15 @@ function Contact() {
                                 variant="filled"
                                 multiline
                                 rows={6}
-                                focused
+
+                                style={{
+                                    backgroundColor: "white"
+                                }}
+                                InputProps={{
+                                    style: {
+                                        color: "black"
+                                    }
+                                }}
 
 
 
