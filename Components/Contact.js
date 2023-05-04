@@ -66,7 +66,7 @@ function Contact() {
                             /> */}
 
                             <TextField
-                                sx={{ '& .css-14m6kzo-MuiInputBase-root-MuiFilledInput-root.Mui-focused': { backgroundColor: "white" } }}
+                                sx={{ '& .css-14m6kzo-MuiInputBase-root-MuiFilledInput-root.Mui-focused': { backgroundColor: "neutral.white" } }}
                                 id="name"
                                 name="name"
                                 type="name"
@@ -85,7 +85,7 @@ function Contact() {
                                 errors={state.errors}
                             />
                             <TextField
-                                sx={{ '& .css-14m6kzo-MuiInputBase-root-MuiFilledInput-root.Mui-focused': { backgroundColor: "white" } }}
+                                sx={{ '& .css-14m6kzo-MuiInputBase-root-MuiFilledInput-root.Mui-focused': { backgroundColor: "neutral.white" } }}
                                 id="email"
                                 name="email"
                                 type="email"
@@ -112,15 +112,16 @@ function Contact() {
                         </Grid>
                         <Grid item xs={12} md={6} sx={{ display: "flex", flexDirection: "column", justifyContent: "space-between", gap: "40px" }}>
                             <TextField
-
+                                sx={{ '& .css-14m6kzo-MuiInputBase-root-MuiFilledInput-root.Mui-focused': { backgroundColor: "neutral.white" } }}
                                 id="message"
                                 name="message"
                                 label="Message"
                                 color="secondary"
-                                variant="outlined"
+                                variant="filled"
                                 multiline
                                 rows={6}
                                 focused
+
 
 
 
