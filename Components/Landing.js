@@ -2,7 +2,7 @@ import React from 'react'
 import { Box, Typography, Divider, Avatar } from '@mui/material'
 import styles from '../src/styles/Home.module.css'
 import Image from 'next/image'
-import profile from '../public/assets/sigma male.jpeg'
+import profile from '../public/assets/blurred.png'
 import background from '../public/assets/background.jpg'
 import { ColorModeContext } from '../public/theme'
 import { styled, useTheme, alpha } from '@mui/material/styles';
@@ -36,16 +36,16 @@ function Landing() {
                                 <Avatar className={styles.iconContact}  ><FacebookIcon /></Avatar>
                             </a> */}
                         <a href=''>
-                            <Avatar className={styles.iconContact}   ><GitHubIcon /></Avatar>
+                            <Avatar className={styles.iconContact} sx={{ backgroundColor: "black" }}  ><GitHubIcon /></Avatar>
                         </a>
                         <a href=''>
-                            <Avatar className={styles.iconContact}   ><LinkedInIcon /></Avatar></a>
+                            <Avatar className={styles.iconContact} sx={{ backgroundColor: "black" }}  ><LinkedInIcon /></Avatar></a>
                         <a href=''>
-                            <Avatar className={styles.iconContact}   >< WhatsAppIcon /></Avatar>
+                            <Avatar className={styles.iconContact} sx={{ backgroundColor: "black" }}  >< WhatsAppIcon /></Avatar>
                         </a>
 
                         <a href=''>
-                            <Avatar className={styles.iconContact}   ><EmailIcon /></Avatar>
+                            <Avatar className={styles.iconContact} sx={{ backgroundColor: "black" }}  ><EmailIcon /></Avatar>
                         </a>
 
                     </Box>

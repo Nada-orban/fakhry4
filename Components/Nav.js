@@ -17,7 +17,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import HomeIcon from '@mui/icons-material/Home';
-import { styled, useTheme, alpha } from '@mui/material/styles';
+import { styled, useTheme, alpha, Theme } from '@mui/material/styles';
 import Person2Icon from '@mui/icons-material/Person2';
 import WorkIcon from '@mui/icons-material/Work';
 import SensorOccupiedIcon from '@mui/icons-material/SensorOccupied';
@@ -40,9 +40,11 @@ import MenuItem from '@mui/material/MenuItem';
 import { NodeNextRequest } from 'next/dist/server/base-http/node';
 import PropTypes from 'prop-types';
 import { Link } from 'react-scroll'
+import zIndex from '@mui/material/styles/zIndex';
 
 
 const drawerWidth = 240;
+
 
 
 
@@ -98,6 +100,11 @@ ScrollTop.propTypes = {
 
 
 
+
+
+
+
+
 // const useStyles = makeStyles((theme) => ({
 //     appBarTransparent: {
 //         backgroundColor: 'transparent',
@@ -140,28 +147,77 @@ function Nav(props) {
     //     }
     // }, [])
 
+    //top drawer
+    const [state, setState] = React.useState({
+        top: false,
+
+    });
+
+    const toggleDrawer = (anchor, open) => (event) => {
+        if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+            return;
+        }
+
+        setState({ ...state, [anchor]: open });
+    };
+
+    const list = (anchor) => (
+        <Box
 
 
-
-
-
-
-    const drawer = (
-        <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', }}>
-            <Typography variant="h6" sx={{ my: 2 }}>
-                MUI
-            </Typography>
-            <Divider />
-            <List>
-
-                <ListItem key="hjj" disablePadding>
-                    <ListItemButton sx={{ textAlign: 'center' }}>
-                        <ListItemText primary="hjj" />
-                    </ListItemButton>
+            sx={{ width: 'auto', backgroundColor: "black", color: 'white', }}
+            role="presentation"
+            onClick={toggleDrawer(anchor, false)}
+            onKeyDown={toggleDrawer(anchor, false)}
+        >
+            <List >
+                <ListItem>
+                    <a href="#about">
+                        <ListItemText primary="ABOUT" />
+                    </a>
+                </ListItem>
+                <ListItem>
+                    <a href="#skills">
+                        <ListItemText primary="SKILLS" />
+                    </a>
+                </ListItem>
+                <ListItem>
+                    <a href="#projects">
+                        <ListItemText primary="PROJECTS" />
+                    </a>
+                </ListItem>
+                <ListItem>
+                    <a href="#papers">
+                        <ListItemText primary="PAPERS" />
+                    </a>
+                </ListItem>
+                <ListItem>
+                    <a href="#timeline">
+                        <ListItemText primary="TIMELINE" />
+                    </a>
+                </ListItem>
+                <ListItem>
+                    <a href="#contact">
+                        <ListItemText primary="CONTACT" />
+                    </a>
+                </ListItem>
+                <ListItem>
+                    <a href="https://drive.google.com/file/d/104BElFusWYq6HvrSFBAB7fCKLfOo-3zg/view">
+                        <ListItemText primary="RESUME" />
+                    </a>
                 </ListItem>
 
+
             </List>
-        </Box>);
+        </Box>
+    );
+
+
+
+
+
+
+
 
 
 
@@ -226,7 +282,7 @@ function Nav(props) {
                                             </Link>
                                         </ListItem>
                                         <ListItem className={Styles.navLink}>
-                                            <a href="#contact">
+                                            <a href="https://drive.google.com/file/d/104BElFusWYq6HvrSFBAB7fCKLfOo-3zg/view">
                                                 <ListItemText primary="RESUME" />
                                             </a>
                                         </ListItem>
@@ -245,30 +301,13 @@ function Nav(props) {
 
                 </AppBar>
                 <Toolbar id="back-to-top-anchor" />
-                {/* <Box component="nav">
-                    <Drawer
 
-                        variant="temporary"
-                        open={mobileOpen}
-                        onClose={handleDrawerToggle}
-                        ModalProps={{
-                            keepMounted: true, // Better open performance on mobile.
-                        }}
-                        sx={{
-                            display: { xs: 'block', sm: 'none' },
-                            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
-
-                        }}
-                    >
-                        {drawer}
-                    </Drawer>
-                </Box> */}
                 {/* mobile view 1*/}
 
-                <AppBar variant="permanent" position="fixed" sx={{ display: { md: 'none', sm: 'block' }, backgroundColor: "black" }}>
+                <AppBar variant="permanent" position="fixed" sx={{ zIndex: 1200, display: { md: 'none', sm: 'block' }, backgroundColor: "black", }}>
                     <Container>
                         <Toolbar >
-                            <Box display='flex' flexGrow={1} >
+                            <Box display='flex' flexGrow={1} sx={{ zIndex: 1300 }} variant="permanent" >
                                 <Typography
                                     variant="h5"
                                     sx={{ flexGrow: 1, display: { xs: 'block', sm: 'block' }, color: "secondary.main", mt: 1, fontSize: "25px" }}
@@ -276,8 +315,9 @@ function Nav(props) {
                                     Ahmed Fakhry
                                 </Typography>
                                 <IconButton
+
                                     variant="contained"
-                                    onClick={() => setOpen(!open)}
+                                    onClick={toggleDrawer('top', true)}
                                     sx={{ display: { md: 'none', sm: 'block' }, backgroundColor: "secondary.main", borderRadius: "10px", mt: 1, display: "flex" }}
                                     className={Styles.menuButton}
                                 >
@@ -286,8 +326,16 @@ function Nav(props) {
                                     <MenuIcon sx={{ color: "black" }} />
                                 </IconButton>
                             </Box>
+                            <Drawer
+                                sx={{ zIndex: 1100 }}
+                                anchor={'top'}
+                                open={state['top']}
+                                onClose={toggleDrawer('top', false)}
+                            >
+                                {list('top')}
+                            </Drawer>
                         </Toolbar>
-                        <Box className={Styles.menuBox}>
+                        {/* <Box className={Styles.menuBox}>
                             {open && (
                                 <List >
                                     <ListItem>
@@ -331,7 +379,7 @@ function Nav(props) {
 
                             )}
 
-                        </Box>
+                        </Box> */}
                     </Container>
                 </AppBar>
 
@@ -354,62 +402,5 @@ function Nav(props) {
 
 
 
-export default Nav// <Box onClick={handleDrawerToggle} sx={{
-    //     textAlign: 'center', backgroundColor: "background.main",
-    //     color: "text.primary", height: "100vh", pt: 3, borderTopRightRadius: "20px", borderBottomRightRadius: "20px",
-    // }}>
-
-    //     <IconButton >
-    //         <CloseIcon sx={{ color: "secondary.main", position: "absolute", left: "90px" }} />
-    //     </IconButton>
-    //     {/*
-    //     <Typography variant="h6" sx={{ my: 2 }}>
-    //         nada
-    //     </Typography> */}
-
-
-    //     <List sx={{ display: "grid", direction: "column", justifyContent: "center", my: 3 }} data-aos="fade-right" data-aos-once="false" >
-    //         <ListItem>
-    //             <a href="#home">
-    //                 <ListItemButton className={Styles.drawer_icon}>
-    //                     <HomeIcon sx={{ color: "secondary.main", width: "50px" }} />
-    //                     <ListItemText primary="Home" />
-    //                 </ListItemButton>
-    //             </a>
-    //         </ListItem>
-    //         <ListItem>
-    //             <a href="#about">
-    //                 <ListItemButton className={Styles.drawer_icon}>
-    //                     <Person2Icon sx={{ mx: 2 }} />
-    //                     <ListItemText primary="About" />
-    //                 </ListItemButton>
-    //             </a>
-    //         </ListItem>
-    //         <ListItem>
-    //             <a href="#skills">
-    //                 <ListItemButton className={Styles.drawer_icon}>
-    //                     < SensorOccupiedIcon sx={{ mx: 2 }} />
-    //                     <ListItemText primary="Skills" />
-    //                 </ListItemButton>
-    //             </a>
-    //         </ListItem>
-    //         <ListItem>
-    //             <a href="#projects">
-    //                 <ListItemButton className={Styles.drawer_icon}>
-    //                     <WorkIcon sx={{ mx: 2 }} />
-    //                     <ListItemText primary="Projects" />
-    //                 </ListItemButton>
-    //             </a>
-    //         </ListItem>
-    //         <ListItem>
-    //             <a href="#contact">
-    //                 <ListItemButton className={Styles.drawer_icon}>
-    //                     <ConnectWithoutContactIcon sx={{ mx: 2 }} />
-    //                     <ListItemText primary="Contact" />
-    //                 </ListItemButton>
-    //             </a>
-    //         </ListItem>
-    //     </List>
-    // </Box>
-
+export default Nav
 

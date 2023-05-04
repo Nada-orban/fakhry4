@@ -22,7 +22,7 @@ export const themeSettongs = (mode) => {
                     red: red[500],
                     blue: blue[900],
                     white: "#fff",
-                    skill: "black"
+                    contact: "black"
                 },
                 background: {
                     main: "#fff",
@@ -87,5 +87,6 @@ export const useMode = () => {
         }
     }), []);
     const theme = useMemo(() => createTheme(themeSettongs(mode)), [mode]);
+
     return [theme, colorMode];
 };

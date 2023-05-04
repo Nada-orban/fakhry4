@@ -1,10 +1,11 @@
 import '../styles/globals.css'
-import { ThemeProvider, CssBaseline } from '@mui/material';
+import { ThemeProvider, CssBaseline, } from '@mui/material';
 import { ColorModeContext, useMode } from '../../public/theme'
 import { styled, useTheme, alpha } from '@mui/material/styles';
 
 
 export default function App({ Component, pageProps }) {
+
   const [theme, colorMode] = useMode();
   // const router = useRouter();
   // const { Path } = router;
@@ -12,7 +13,7 @@ export default function App({ Component, pageProps }) {
 
   return (
     <ColorModeContext.Provider value={colorMode}>
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={theme} >
         <CssBaseline />
         <Component {...pageProps} />
         <style jsx global>{`

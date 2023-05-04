@@ -3,7 +3,7 @@ import { Box, Tabs, Tab, Typography, LinkTab, Grid, Button, Container, Paper, Li
 import styles from '../src/styles/Home.module.css'
 import { ColorModeContext } from '../public/theme'
 import { styled, useTheme, alpha } from '@mui/material/styles';
-import profile from '../public/assets/sigma male.jpeg'
+import profile from '../public/assets/blurred.png'
 import Image from 'next/image'
 import DoneIcon from '@mui/icons-material/Done';
 import SchoolIcon from '@mui/icons-material/School';
@@ -42,17 +42,17 @@ function About() {
                                 {/* <a href="https://www.facebook.com/2447.nada.samir">
                                 <Avatar className={styles.iconContact}  ><FacebookIcon /></Avatar>
                             </a> */}
-                                <a href=''>
-                                    <Avatar className={styles.iconContact}  ><GitHubIcon /></Avatar>
+                                <a href='https://github.com/AhmedFakhry47'>
+                                    <Avatar className={styles.iconContact} sx={{ backgroundColor: "neutral.contact" }} ><GitHubIcon /></Avatar>
                                 </a>
-                                <a href=''>
-                                    <Avatar className={styles.iconContact}  ><LinkedInIcon /></Avatar></a>
-                                <a href=''>
-                                    <Avatar className={styles.iconContact}  >< WhatsAppIcon /></Avatar>
+                                <a href='https://www.linkedin.com/in/ahmed-fakhry-5b178017a'>
+                                    <Avatar className={styles.iconContact} sx={{ backgroundColor: "neutral.contact" }}  ><LinkedInIcon /></Avatar></a>
+                                <a href='(+20) 10-9813-0059'>
+                                    <Avatar className={styles.iconContact} sx={{ backgroundColor: "neutral.contact" }}  >< WhatsAppIcon /></Avatar>
                                 </a>
 
-                                <a href=''>
-                                    <Avatar className={styles.iconContact}  ><EmailIcon /></Avatar>
+                                <a href='mailto:ahmedfakhry805@gmail.com'>
+                                    <Avatar className={styles.iconContact} sx={{ backgroundColor: "neutral.contact" }}  ><EmailIcon /></Avatar>
                                 </a>
 
                             </Box>
@@ -72,25 +72,46 @@ function About() {
                         </Typography>
                         <Typography variant='h6' sx={{ color: "text.secondary" }}>I'm currently a graduate student working towards my Master of Engineering (M.Eng.) degree in Computer Science/Artificial Intelligence.</Typography>
                         <List >
-                            <Typography variant='h5' sx={{ my: 2, fontWeight: "bold" }} >Massachusetts Institute of Technology (MIT)</Typography>
+                            <Typography variant='h4' sx={{ my: 2, fontWeight: "bold" }} >Education</Typography>
                             <ListItem>
                                 <ListItemIcon>
-                                    <SchoolIcon sx={{ color: "text.primary" }} />
+                                    <SchoolIcon sx={{ color: "text.primary", width: "30px", height: "30px" }} />
                                 </ListItemIcon>
-                                <ListItemText primary="Master of Engineering in Computer Science/Artificial Intelligence" primaryTypographyProps={{ fontSize: '18px', color: "text.secondary" }}  ></ListItemText>
+                                <ListItemText primary="M.SC in computing and information systems" primaryTypographyProps={{ fontSize: '21px', color: "text.primary", fontWeight: "bold" }}
+                                    secondary={<React.Fragment>
+                                        <Typography
+                                            sx={{ fontSize: '18px', marginRight: 9 }}
+
+                                            variant="body2"
+                                            color="text.primary"
+                                        >
+                                            Liverpool John Moores University
+                                        </Typography>
+
+                                        {/* <Typography>Feb 2023 ‐ Now</Typography> */}
+
+                                        {'Feb 2023 ‐ Now'}
+                                    </React.Fragment>}  ></ListItemText>
                             </ListItem>
                             <ListItem>
                                 <ListItemIcon>
-                                    <SchoolIcon sx={{ color: "text.primary" }} />
+                                    <SchoolIcon sx={{ color: "text.primary", width: "30px", height: "30px" }} />
                                 </ListItemIcon>
-                                <ListItemText primary="Master of Engineering in Computer Science/Artificial Intelligence" primaryTypographyProps={{ fontSize: '18px', color: "text.secondary" }}  ></ListItemText>
+                                <ListItemText primary="B.SC in electronics and communication engineering " primaryTypographyProps={{ fontSize: '21px', color: "text.primary", fontWeight: "bold" }}
+                                    secondary={<React.Fragment>
+                                        <Typography
+                                            sx={{ display: 'inline', fontSize: '18px', marginRight: 9 }}
+                                            component="span"
+                                            variant="body2"
+                                            color="text.primary"
+                                        >
+                                            Liverpool John Moores University
+                                        </Typography>
+                                        {'Feb 2023 ‐ Now'}
+                                    </React.Fragment>} ></ListItemText>
                             </ListItem>
-                            <ListItem>
-                                <ListItemIcon>
-                                    <SchoolIcon sx={{ color: "text.primary" }} />
-                                </ListItemIcon>
-                                <ListItemText primary="Master of Engineering in Computer Science/Artificial Intelligence" primaryTypographyProps={{ fontSize: '18px', color: "text.secondary" }}  ></ListItemText>
-                            </ListItem>
+
+
                         </List>
 
 
@@ -99,8 +120,8 @@ function About() {
 
 
                 </Grid>
-            </Container>
-        </Box>
+            </Container >
+        </Box >
     )
 }
 

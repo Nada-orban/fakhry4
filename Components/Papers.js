@@ -16,12 +16,12 @@ function Papers() {
                 <Typography variant='h2' sx={{ textAlign: "center", fontWeight: "bold" }}>Papers</Typography>
                 <Box my="40px">
                     <Box my="20px">
-                        <Link href="" className={styles.linkText}>
-                            <Typography variant='h5' sx={{ color: "secondary.main", fontWeight: "bolder" }}>A Continuous Silent Speech Recognition System for
-                                AlterEgo, a Silent Speech Interface</Typography>
+                        <Link href="https://arxiv.org/abs/2011.13320" className={styles.linkText}>
+                            <Typography variant='h5' sx={{ color: "secondary.main", fontWeight: "bolder" }}>Virufy: Global Applicability of Crowdsourced and Clinical Datasets for AI Detection of COVID‐19 from Cough Audio
+                                Samples</Typography>
                         </Link>
-                        <Typography variant='h6'>Eric Wadkins. 2019</Typography>
-                        <Link href='' className={styles.linkText}>
+                        <Typography variant='h6'>Nov 2020, Awaiting AE Recommendation from IEEE TAI.</Typography>
+                        <Link href='https://arxiv.org/abs/2011.13320' className={styles.linkText}>
                             <Box display="flex" justifyContent="center">
                                 <Typography variant='h5' sx={{ color: "secondary.main", mx: 1 }}>Download</Typography>
                                 <DownloadIcon sx={{ color: "secondary.main", width: "26px", height: "26px" }} className={styles.iconLink} />
@@ -29,12 +29,11 @@ function Papers() {
                         </Link>
                     </Box>
                     <Box my="20px">
-                        <Link href="" className={styles.linkText}>
-                            <Typography variant='h5' sx={{ color: "secondary.main", fontWeight: "bolder" }}>A Continuous Silent Speech Recognition System for
-                                AlterEgo, a Silent Speech Interface</Typography>
+                        <Link href="https://www.isca-speech.org/archive/pdfs/interspeech_2021/fakhry21_interspeech.pdf" className={styles.linkText}>
+                            <Typography variant='h5' sx={{ color: "secondary.main", fontWeight: "bolder" }}>Virufy: A Multi‐Branch Deep Learning Network for Automated Detection of COVID‐19 </Typography>
                         </Link>
-                        <Typography variant='h6'>Eric Wadkins. 2019</Typography>
-                        <Link href='' className={styles.linkText}>
+                        <Typography variant='h6'>March 2021,Interspeech conference 2021</Typography>
+                        <Link href='https://www.isca-speech.org/archive/pdfs/interspeech_2021/fakhry21_interspeech.pdf.' className={styles.linkText}>
                             <Box display="flex" justifyContent="center">
                                 <Typography variant='h5' sx={{ color: "secondary.main", mx: 1 }}>Download</Typography>
                                 <DownloadIcon sx={{ color: "secondary.main", width: "26px", height: "26px" }} className={styles.iconLink} />
