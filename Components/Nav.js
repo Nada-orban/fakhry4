@@ -304,10 +304,10 @@ function Nav(props) {
 
                 {/* mobile view 1*/}
 
-                <AppBar variant="permanent" position="fixed" sx={{ zIndex: 1200, display: { md: 'none', sm: 'block' }, backgroundColor: "black", }}>
+                <AppBar variant="permanent" position="fixed" sx={{ display: { md: 'none', sm: 'block' }, backgroundColor: "black", }}>
                     <Container>
                         <Toolbar >
-                            <Box display='flex' flexGrow={1} sx={{ zIndex: 1300 }} variant="permanent" >
+                            <Box display='flex' flexGrow={1} variant="permanent" >
                                 <Typography
                                     variant="h5"
                                     sx={{ flexGrow: 1, display: { xs: 'block', sm: 'block' }, color: "secondary.main", mt: 1, fontSize: "25px" }}
@@ -327,7 +327,7 @@ function Nav(props) {
                                 </IconButton>
                             </Box>
                             <Drawer
-                                sx={{ zIndex: 1100 }}
+
                                 anchor={'top'}
                                 open={state['top']}
                                 onClose={toggleDrawer('top', false)}
