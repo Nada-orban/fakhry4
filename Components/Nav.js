@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import NightlightRoundIcon from '@mui/icons-material/NightlightRound';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import AppBar from '@mui/material/AppBar';
-import { Box, Container, Fade, Slide } from '@mui/material';
+import { Box, Container, Fade, ListItemIcon, Slide } from '@mui/material';
 import CssBaseline from '@mui/material/CssBaseline';
 import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
@@ -40,6 +40,7 @@ import MenuItem from '@mui/material/MenuItem';
 import { NodeNextRequest } from 'next/dist/server/base-http/node';
 import PropTypes from 'prop-types';
 import { Link } from 'react-scroll'
+import { AiOutlineFilePdf } from 'react-icons/ai'
 
 
 
@@ -172,39 +173,42 @@ function Nav(props) {
         >
             <List >
                 <ListItem>
-                    <a href="#about">
+                    <Link to="about" spy={true} smooth={true} offset={-50} duration={500} >
                         <ListItemText primary="ABOUT" />
-                    </a>
+                    </Link>
                 </ListItem>
                 <ListItem>
-                    <a href="#skills">
+                    <Link to="skill" spy={true} smooth={true} offset={-50} duration={500} >
                         <ListItemText primary="SKILLS" />
-                    </a>
+                    </Link>
                 </ListItem>
                 <ListItem>
-                    <a href="#projects">
+                    <Link to="projects" spy={true} smooth={true} offset={-50} duration={500}>
                         <ListItemText primary="PROJECTS" />
-                    </a>
+                    </Link>
                 </ListItem>
                 <ListItem>
-                    <a href="#papers">
+                    <Link to="papers" spy={true} smooth={true} offset={-50} duration={500}>
                         <ListItemText primary="PAPERS" />
-                    </a>
+                    </Link>
                 </ListItem>
                 <ListItem>
-                    <a href="#timeline">
+                    <Link to="timeline" spy={true} smooth={true} offset={-50} duration={500} >
                         <ListItemText primary="TIMELINE" />
-                    </a>
+                    </Link>
                 </ListItem>
                 <ListItem>
-                    <a href="#contact">
+                    <Link to="contact" spy={true} smooth={true} offset={-50} duration={500}>
                         <ListItemText primary="CONTACT" />
-                    </a>
+                    </Link>
                 </ListItem>
                 <ListItem>
-                    <a href="https://drive.google.com/file/d/104BElFusWYq6HvrSFBAB7fCKLfOo-3zg/view">
+                    <ListItemIcon>
+                        < AiOutlineFilePdf />
+                    </ListItemIcon>
+                    <Link href="https://drive.google.com/file/d/104BElFusWYq6HvrSFBAB7fCKLfOo-3zg/view">
                         <ListItemText primary="RESUME" />
-                    </a>
+                    </Link>
                 </ListItem>
 
 

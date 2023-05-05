@@ -11,6 +11,8 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import EmailIcon from '@mui/icons-material/Email';
 import Nav from './Nav'
+import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
+import { Link } from 'react-scroll'
 
 function Landing() {
     const colorMode = React.useContext(ColorModeContext);
@@ -20,17 +22,18 @@ function Landing() {
             <Box className={styles.overlay}>
                 <Nav />
                 <Box sx={{ display: "flex", flexDirection: "column", justifyContent: "center", textAlign: "center", }} className={styles.landingInfoBox}>
-                    <Box border="6px solid white" borderRadius="50%" width="250px" height="250px" overflow="hidden" margin="auto" >
+                    <Box border="6px solid white" borderRadius="50%" width="250px" height="250px" overflow="hidden" margin="auto" padding={"0px 0px"} >
                         <Image
                             src={profile}
                             alt="Picture of the author"
-                            width={250}
-                            height={250}
+                            width={290}
+                        // height={250}
 
                         />
                     </Box>
-                    <Typography variant='h2' sx={{ color: "white", mt: "30px" }}>FAKHRY</Typography>
-                    <Typography variant='h6' sx={{ color: "white" }}>Software Engineer @ Google - Grad Student - AI/ML Researcher</Typography>
+                    <Typography variant='h2' sx={{ color: "white", mt: "30px", fontWeight: "bold" }}>Ahmed Fakhry</Typography>
+                    <Typography variant='h6' sx={{ color: "white", fontStyle: "italic" }}>Machine Learning Developer at OpenAI</Typography>
+
                     <Box gap="15px" my="20px" justifyContent="center" sx={{ display: { xs: "flex", sm: "none" } }}>
                         {/* <a href="https://www.facebook.com/2447.nada.samir">
                                 <Avatar className={styles.iconContact}  ><FacebookIcon /></Avatar>
@@ -51,6 +54,17 @@ function Landing() {
                     </Box>
 
                 </Box>
+                <Box
+                    justifyContent="center" mt="100px" sx={{ display: { xs: "none", sm: "flex" } }}>
+                    <Link to="about" spy={true} smooth={true} offset={-50} duration={500} >
+                        <KeyboardDoubleArrowDownIcon sx={{
+                            width: "50px", height: "50px", color: "secondary.main",
+                            cursor: "pointer", margin: " auto",
+                        }} className={styles.arrow} />
+                    </Link>
+
+                </Box>
+
             </Box>
         </Box>
     )

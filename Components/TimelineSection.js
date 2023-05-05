@@ -64,15 +64,14 @@ function TimelineSection() {
                     <TimelineItem>
                         <TimelineSeparator>
                             <TimelineConnector />
-                            <TimelineDot color="primary" variant="outlined" sx={{ width: "150px", height: "150px", overflow: "hidden", border: "2px solid #bdbdbd", padding: "0px" }}>
+                            <TimelineDot color="primary" variant="outlined" sx={{ width: "150px", height: "150px", overflow: "hidden", border: "2px solid #bdbdbd", padding: "10px 0px" }}>
                                 <Image
                                     src={perphoto}
                                     alt="Picture of the author"
                                     width={130}
-                                    height={130}
                                 />
                             </TimelineDot>
-                            <TimelineConnector sx={{ height: "300px" }} />
+                            <TimelineConnector sx={{ height: "250px" }} />
                         </TimelineSeparator>
                         <TimelineContent sx={{ py: '12px', px: 2 }}>
                             <Typography variant='subtitle1' sx={{ color: "text.secondary" }}>Jan 2022 ‐ Jan 2023</Typography>
@@ -82,27 +81,27 @@ function TimelineSection() {
                             </Typography>
                             <Typography variant='h6' sx={{ fontWeight: "bold" }}>UK ‐ Remote</Typography>
                             <Typography variant='h6' >
-                                Lead a team of four data scientists where I was responsible for developing the company’s
-                                flagship product, Digital Eye, alongside other products such as Drug Interaction Checker,
-                                Digital Eye is based on a deep learning model for digitizing handwritten documents,
-                                Carried out research and built the core understanding of the company performance metrics
-                                to qualitatively inform and interpret models,
-                                Was responsible for supporting the growth and professional development of the team.
+                                •Lead a team of four data scientists where I was responsible for developing the company’s
+                                flagship product, Digital Eye, alongside other products such as Drug Interaction Checker.<br />
+                                •Digital Eye is based on a deep learning model for digitizing handwritten documents<br />
+                                •Carried out research and built the core understanding of the company performance metrics
+                                to qualitatively inform and interpret models<br />
+                                •Was responsible for supporting the growth and professional development of the team.
                             </Typography>
                         </TimelineContent>
                     </TimelineItem>
                     <TimelineItem>
                         <TimelineSeparator>
                             <TimelineConnector />
-                            <TimelineDot color="primary" variant="outlined" sx={{ width: "150px", height: "150px", overflow: "hidden", border: "2px solid #bdbdbd", padding: "0px" }}>
+                            <TimelineDot color="primary" variant="outlined" sx={{ width: "150px", height: "150px", overflow: "hidden", border: "2px solid #bdbdbd", padding: "10px 0px" }}>
                                 <Image
                                     src={perphoto}
                                     alt="Picture of the author"
                                     width={130}
-                                    height={130}
+
                                 />
                             </TimelineDot>
-                            <TimelineConnector sx={{ height: "200px" }} />
+                            <TimelineConnector sx={{ height: "100px" }} />
                         </TimelineSeparator>
                         <TimelineContent sx={{ py: '12px', px: 2 }}>
                             <Typography variant='subtitle1' sx={{ color: "text.secondary" }}>July 2021 ‐ Jan 2022</Typography>
@@ -128,7 +127,7 @@ function TimelineSection() {
                                     height={140}
                                 />
                             </TimelineDot>
-                            <TimelineConnector sx={{ height: "250px" }} />
+                            <TimelineConnector sx={{ height: "180px" }} />
                         </TimelineSeparator>
                         <TimelineContent sx={{ py: '12px', px: 2 }}>
                             <Typography variant='subtitle1' sx={{ color: "text.secondary" }}>Dec 2020 ‐ July 2021</Typography>
@@ -148,12 +147,11 @@ function TimelineSection() {
                         <TimelineSeparator>
                             <TimelineConnector />
                             <TimelineConnector />
-                            <TimelineDot color="primary" variant="outlined" sx={{ width: "150px", height: "150px", overflow: "hidden", border: "2px solid #bdbdbd", padding: "5px" }}>
+                            <TimelineDot color="primary" variant="outlined" sx={{ width: "150px", height: "150px", overflow: "hidden", border: "2px solid #bdbdbd", padding: "40px 20px" }}>
                                 <Image
                                     src={virufyphoto}
                                     alt="Picture of the author"
                                     width={120}
-                                    height={120}
                                 />
                             </TimelineDot>
                             <TimelineConnector sx={{ height: "250px" }} />
@@ -179,12 +177,12 @@ function TimelineSection() {
                     <TimelineItem>
                         <TimelineSeparator>
                             <TimelineConnector />
-                            <TimelineDot color="primary" variant="outlined" sx={{ width: "150px", height: "150px", overflow: "hidden", border: "2px solid #bdbdbd", padding: "5px" }}>
+                            <TimelineDot color="primary" variant="outlined" sx={{ width: "150px", height: "150px", overflow: "hidden", border: "2px solid #bdbdbd", padding: "40px 20px" }}>
                                 <Image
                                     src={virufyphoto}
                                     alt="Picture of the author"
                                     width={120}
-                                    height={120}
+
                                 />
                             </TimelineDot>
                             <TimelineConnector sx={{ height: "350px" }} />

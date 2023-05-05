@@ -26,7 +26,8 @@ export const themeSettongs = (mode) => {
                 },
                 background: {
                     main: "#fff",
-                    secondary: "#2988bc"
+                    secondary: "#2988bc",
+                    primary: "#edeeef"
                     // main: "rgb(52, 71, 103)",
                 },
                 text: {

@@ -13,13 +13,14 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import EmailIcon from '@mui/icons-material/Email';
 import TwitterIcon from '@mui/icons-material/Twitter';
-import Link from 'next/link'
+import { Link } from 'react-scroll'
+import { AiOutlineFilePdf } from 'react-icons/ai'
 
 function About() {
     const colorMode = React.useContext(ColorModeContext);
     const theme = useTheme();
     return (
-        <Box id="about" py="15vh" className={styles.aboutbackground} sx={{ width: "100vw" }} >
+        <Box id="about" py="5vh" className={styles.aboutbackground} sx={{ width: "100vw", backgroundColor: "background.primary" }} >
             <Container>
                 <Grid container spacing={3}>
                     <Grid item md={4} xs={12} sx={{ mb: 3, display: { xs: "none", sm: "flex" }, flexDirection: "column", justifyContent: "center" }} >
@@ -31,14 +32,14 @@ function About() {
                                 <Image
                                     src={profile}
                                     alt="Picture of the author"
-                                    width={300}
-                                    height={300}
+                                    width={360}
+                                // height={300}
 
 
                                 />
                             </Box >
 
-                            <Box display="flex" gap="15px" mt="20px" justifyContent="center">
+                            <Box display="flex" gap="15px" mt="30px" justifyContent="center">
                                 {/* <a href="https://www.facebook.com/2447.nada.samir">
                                 <Avatar className={styles.iconContact}  ><FacebookIcon /></Avatar>
                             </a> */}
@@ -72,23 +73,21 @@ function About() {
                         </Typography>
                         <Typography variant='h6' sx={{ color: "text.secondary" }}>I'm currently a graduate student working towards my Master of Engineering (M.Eng.) degree in Computer Science/Artificial Intelligence.</Typography>
                         <List >
-                            <Typography variant='h4' sx={{ my: 2, fontWeight: "bold" }} >Education</Typography>
+                            <Typography variant='h4' sx={{ my: 1, fontWeight: "bold" }} >Education</Typography>
                             <ListItem>
                                 <ListItemIcon>
                                     <SchoolIcon sx={{ color: "text.primary", width: "30px", height: "30px" }} />
                                 </ListItemIcon>
-                                <ListItemText primary="M.SC in computing and information systems" primaryTypographyProps={{ fontSize: '21px', color: "text.primary", fontWeight: "bold" }}
+                                <ListItemText primary="M.SC in computing and information systems" primaryTypographyProps={{ fontSize: '18px', color: "text.primary", fontWeight: "bold" }}
                                     secondary={<React.Fragment>
                                         <Typography
-                                            sx={{ fontSize: '18px', marginRight: 9 }}
-
+                                            sx={{ fontSize: '18px', marginRight: 6 }}
+                                            component="span"
                                             variant="body2"
                                             color="text.primary"
                                         >
                                             Liverpool John Moores University
                                         </Typography>
-
-                                        {/* <Typography>Feb 2023 ‐ Now</Typography> */}
 
                                         {'Feb 2023 ‐ Now'}
                                     </React.Fragment>}  ></ListItemText>
@@ -97,29 +96,64 @@ function About() {
                                 <ListItemIcon>
                                     <SchoolIcon sx={{ color: "text.primary", width: "30px", height: "30px" }} />
                                 </ListItemIcon>
-                                <ListItemText primary="B.SC in electronics and communication engineering " primaryTypographyProps={{ fontSize: '21px', color: "text.primary", fontWeight: "bold" }}
+                                <ListItemText primary="B.SC in electronics and communication engineering " primaryTypographyProps={{ fontSize: '18px', color: "text.primary", fontWeight: "bold" }}
                                     secondary={<React.Fragment>
                                         <Typography
-                                            sx={{ display: 'inline', fontSize: '18px', marginRight: 9 }}
+                                            sx={{ fontSize: '18px', marginRight: 9 }}
                                             component="span"
                                             variant="body2"
                                             color="text.primary"
                                         >
-                                            Liverpool John Moores University
+                                            Alexandria University, Faculty of Engineering
                                         </Typography>
-                                        {'Feb 2023 ‐ Now'}
+
+                                        {'Sep 2015 ‐ Aug 2020'}
                                     </React.Fragment>} ></ListItemText>
                             </ListItem>
-
-
                         </List>
-
-
                     </Grid>
-
-
-
                 </Grid>
+                <Box display="flex" justifyContent="center" flexDirection="column" textAlign="center" my="20px " >
+                    <Typography variant='h4' sx={{ mb: "20px", mt: "50px", fontWeight: "bold" }}>
+                        Learn more about my:
+                    </Typography>
+
+                    <Box display="flex" justifyContent="center" alignItems="center" gap="20px">
+                        <Paper elevation={3} sx={{ width: "150px", p: "20px 10px ", cursor: "pointer" }} className={styles.paperLink}>
+                            <Link to="skill" spy={true} smooth={true} offset={-50} duration={500} >
+                                <Typography variant='h5' sx={{ textAlign: "center" }}>Skills</Typography>
+                            </Link>
+                        </Paper>
+                        <Paper elevation={3} sx={{ width: "150px", p: "20px 10px ", cursor: "pointer" }} className={styles.paperLink}>
+                            <Link to="projects" spy={true} smooth={true} offset={-50} duration={500} >
+                                <Typography variant='h5' sx={{ textAlign: "center" }}>Projects</Typography>
+                            </Link>
+                        </Paper>
+                        <Paper elevation={3} sx={{ width: "150px", p: "20px 10px ", cursor: "pointer" }} className={styles.paperLink}>
+                            <Link to="papers" spy={true} smooth={true} offset={-50} duration={500}>
+                                <Typography variant='h5' sx={{ textAlign: "center" }}>Papers</Typography>
+                            </Link>
+                        </Paper>
+
+                    </Box>
+                    <Box display="flex" justifyContent="center" alignItems="center" gap="20px" mt="20px">
+                        <Link to="timeline" spy={true} smooth={true} offset={-50} duration={500}>
+                            <Paper elevation={3} sx={{ width: "200px", p: "20px 10px ", cursor: "pointer" }} className={styles.paperLink}>
+                                <Typography variant='h5' sx={{ textAlign: "center" }}>Work Experience</Typography>
+                            </Paper>
+                        </Link>
+                        <Link href="https://drive.google.com/file/d/104BElFusWYq6HvrSFBAB7fCKLfOo-3zg/view" >
+                            <Paper elevation={3} sx={{ width: "150px", p: "20px 10px ", display: "flex", textAlign: "center", justifyContent: "center", cursor: "pointer", alignItems: "center", gap: "5px", }} className={styles.paperLink2}>
+                                <AiOutlineFilePdf />
+                                <Typography variant='h5' sx={{ textAlign: "center" }}>Resume</Typography>
+                            </Paper>
+                        </Link>
+                    </Box>
+
+
+
+                </Box>
+
             </Container >
         </Box >
     )
