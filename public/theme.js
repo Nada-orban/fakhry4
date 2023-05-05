@@ -21,6 +21,7 @@ export const themeSettongs = (mode) => {
                     green: green[400],
                     red: red[500],
                     blue: blue[900],
+                    lightblack: "#212529",
                     white: "#fff",
                     contact: "black"
                 },

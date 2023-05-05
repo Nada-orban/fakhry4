@@ -16,6 +16,7 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import { Link } from 'react-scroll'
 import { AiOutlineFilePdf } from 'react-icons/ai'
 
+
 function About() {
     const colorMode = React.useContext(ColorModeContext);
     const theme = useTheme();
@@ -88,6 +89,7 @@ function About() {
                                         >
                                             Liverpool John Moores University
                                         </Typography>
+                                        <br />
 
                                         {'Feb 2023 ‐ Now'}
                                     </React.Fragment>}  ></ListItemText>
@@ -99,56 +101,65 @@ function About() {
                                 <ListItemText primary="B.SC in electronics and communication engineering " primaryTypographyProps={{ fontSize: '18px', color: "text.primary", fontWeight: "bold" }}
                                     secondary={<React.Fragment>
                                         <Typography
-                                            sx={{ fontSize: '18px', marginRight: 9 }}
+                                            sx={{ fontSize: '18px', marginRight: 2 }}
                                             component="span"
                                             variant="body2"
                                             color="text.primary"
                                         >
                                             Alexandria University, Faculty of Engineering
                                         </Typography>
-
+                                        <br />
                                         {'Sep 2015 ‐ Aug 2020'}
                                     </React.Fragment>} ></ListItemText>
                             </ListItem>
                         </List>
                     </Grid>
                 </Grid>
-                <Box display="flex" justifyContent="center" flexDirection="column" textAlign="center" my="20px " >
+                <Box display="flex" justifyContent="center" flexDirection="column" textAlign="center" my="20px "  >
                     <Typography variant='h4' sx={{ mb: "20px", mt: "50px", fontWeight: "bold" }}>
                         Learn more about my:
                     </Typography>
-
-                    <Box display="flex" justifyContent="center" alignItems="center" gap="20px">
-                        <Paper elevation={3} sx={{ width: "150px", p: "20px 10px ", cursor: "pointer" }} className={styles.paperLink}>
-                            <Link to="skill" spy={true} smooth={true} offset={-50} duration={500} >
-                                <Typography variant='h5' sx={{ textAlign: "center" }}>Skills</Typography>
-                            </Link>
-                        </Paper>
-                        <Paper elevation={3} sx={{ width: "150px", p: "20px 10px ", cursor: "pointer" }} className={styles.paperLink}>
-                            <Link to="projects" spy={true} smooth={true} offset={-50} duration={500} >
-                                <Typography variant='h5' sx={{ textAlign: "center" }}>Projects</Typography>
-                            </Link>
-                        </Paper>
-                        <Paper elevation={3} sx={{ width: "150px", p: "20px 10px ", cursor: "pointer" }} className={styles.paperLink}>
-                            <Link to="papers" spy={true} smooth={true} offset={-50} duration={500}>
-                                <Typography variant='h5' sx={{ textAlign: "center" }}>Papers</Typography>
-                            </Link>
-                        </Paper>
-
-                    </Box>
-                    <Box display="flex" justifyContent="center" alignItems="center" gap="20px" mt="20px">
-                        <Link to="timeline" spy={true} smooth={true} offset={-50} duration={500}>
-                            <Paper elevation={3} sx={{ width: "200px", p: "20px 10px ", cursor: "pointer" }} className={styles.paperLink}>
-                                <Typography variant='h5' sx={{ textAlign: "center" }}>Work Experience</Typography>
+                    <Grid container spacing={3} display="flex" justifyContent="center" alignItems="center">
+                        <Grid item >
+                            <Paper elevation={3} sx={{ width: "150px", p: "20px 10px ", cursor: "pointer" }} className={styles.paperLink}>
+                                <Link to="skill" spy={true} smooth={true} offset={-50} duration={500} >
+                                    <Typography variant='h5' sx={{ textAlign: "center" }}>Skills</Typography>
+                                </Link>
                             </Paper>
-                        </Link>
-                        <Link href="https://drive.google.com/file/d/104BElFusWYq6HvrSFBAB7fCKLfOo-3zg/view" >
-                            <Paper elevation={3} sx={{ width: "150px", p: "20px 10px ", display: "flex", textAlign: "center", justifyContent: "center", cursor: "pointer", alignItems: "center", gap: "5px", }} className={styles.paperLink2}>
-                                <AiOutlineFilePdf />
-                                <Typography variant='h5' sx={{ textAlign: "center" }}>Resume</Typography>
+                        </Grid>
+                        <Grid item>
+                            <Paper elevation={3} sx={{ width: "150px", p: "20px 10px ", cursor: "pointer" }} className={styles.paperLink}>
+                                <Link to="projects" spy={true} smooth={true} offset={-50} duration={500} >
+                                    <Typography variant='h5' sx={{ textAlign: "center" }}>Projects</Typography>
+                                </Link>
                             </Paper>
-                        </Link>
-                    </Box>
+                        </Grid>
+                        <Grid item>
+                            <Paper elevation={3} sx={{ width: "150px", p: "20px 10px ", cursor: "pointer" }} className={styles.paperLink}>
+                                <Link to="papers" spy={true} smooth={true} offset={-50} duration={500}>
+                                    <Typography variant='h5' sx={{ textAlign: "center" }}>Papers</Typography>
+                                </Link>
+                            </Paper>
+                        </Grid>
+
+                        <Grid item>
+                            <Link to="timeline" spy={true} smooth={true} offset={-50} duration={500}>
+                                <Paper elevation={3} sx={{ width: "200px", p: "20px 10px ", cursor: "pointer" }} className={styles.paperLink}>
+                                    <Typography variant='h5' sx={{ textAlign: "center" }}>Work Experience</Typography>
+                                </Paper>
+                            </Link>
+
+                        </Grid>
+                        <Grid item>
+                            <Link href="https://drive.google.com/file/d/104BElFusWYq6HvrSFBAB7fCKLfOo-3zg/view" >
+                                <Paper elevation={3} sx={{ width: "150px", p: "20px 10px ", display: "flex", textAlign: "center", justifyContent: "center", cursor: "pointer", alignItems: "center", gap: "5px", backgroundColor: "neutral.lightblack", color: "white" }} className={styles.paperLink2}>
+                                    <AiOutlineFilePdf />
+                                    <Typography variant='h5' sx={{ textAlign: "center" }}>Resume</Typography>
+                                </Paper>
+                            </Link>
+
+                        </Grid>
+                    </Grid>
 
 
 
