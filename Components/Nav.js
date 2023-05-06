@@ -44,6 +44,7 @@ import { AiOutlineFilePdf } from 'react-icons/ai'
 
 
 
+
 const drawerWidth = 240;
 
 
@@ -122,10 +123,15 @@ function Nav(props) {
     const colorMode = React.useContext(ColorModeContext);
     const theme = useTheme();
     const [mobileOpen, setMobileOpen] = React.useState(false);
-    const [open, setOpen] = useState(false)
+    const [open, setOpen] = useState(false);
+
+
     const handleDrawerToggle = () => {
         setMobileOpen((prevState) => !prevState);
     };
+
+
+
 
 
     // Transparent to Solid Header on Scroll
@@ -147,82 +153,6 @@ function Nav(props) {
     //         document.removeEventListener('scroll', handleScroll)
     //     }
     // }, [])
-
-    //top drawer
-    const [state, setState] = React.useState({
-        top: false,
-
-    });
-
-    const toggleDrawer = (anchor, open) => (event) => {
-        if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
-            return;
-        }
-
-        setState({ ...state, [anchor]: open });
-    };
-
-    const list = (anchor) => (
-        <Box
-
-
-            sx={{ width: 'auto', backgroundColor: "black", color: 'white', }}
-            role="presentation"
-            onClick={toggleDrawer(anchor, false)}
-            onKeyDown={toggleDrawer(anchor, false)}
-        >
-            <List >
-                <ListItem>
-                    <Link to="about" spy={true} smooth={true} offset={-50} duration={500} >
-                        <ListItemText primary="ABOUT" />
-                    </Link>
-                </ListItem>
-                <ListItem>
-                    <Link to="skill" spy={true} smooth={true} offset={-50} duration={500} >
-                        <ListItemText primary="SKILLS" />
-                    </Link>
-                </ListItem>
-                <ListItem>
-                    <Link to="projects" spy={true} smooth={true} offset={-50} duration={500}>
-                        <ListItemText primary="PROJECTS" />
-                    </Link>
-                </ListItem>
-                <ListItem>
-                    <Link to="papers" spy={true} smooth={true} offset={-50} duration={500}>
-                        <ListItemText primary="PAPERS" />
-                    </Link>
-                </ListItem>
-                <ListItem>
-                    <Link to="timeline" spy={true} smooth={true} offset={-50} duration={500} >
-                        <ListItemText primary="TIMELINE" />
-                    </Link>
-                </ListItem>
-                <ListItem>
-                    <Link to="contact" spy={true} smooth={true} offset={-50} duration={500}>
-                        <ListItemText primary="CONTACT" />
-                    </Link>
-                </ListItem>
-                <ListItem>
-                    <ListItemIcon>
-                        < AiOutlineFilePdf />
-                    </ListItemIcon>
-                    <Link href="https://drive.google.com/file/d/104BElFusWYq6HvrSFBAB7fCKLfOo-3zg/view">
-                        <ListItemText primary="RESUME" />
-                    </Link>
-                </ListItem>
-
-
-            </List>
-        </Box>
-    );
-
-
-
-
-
-
-
-
 
 
     //className={classes[navRef.current]} 
@@ -255,39 +185,40 @@ function Nav(props) {
                                 </IconButton> */}
                                 <Box sx={{ display: { xs: "none", sm: 'none', md: 'block', } }}>
                                     <List sx={{ display: "flex" }}>
-                                        <ListItem className={Styles.navLink}>
-                                            <Link to="about" spy={true} smooth={true} offset={-50} duration={500}  >
+                                        <ListItem className={Styles.navLink2}>
+                                            <Link activeClass="active" to="about" spy={true} smooth={true} offset={-50} duration={500}  >
                                                 <ListItemText primary="ABOUT" />
                                             </Link>
                                         </ListItem>
-                                        <ListItem className={Styles.navLink}>
-                                            <Link to="skill" spy={true} smooth={true} offset={-50} duration={500} >
+                                        <ListItem className={Styles.navLink2}>
+                                            <Link activeClass="active" to="skill" spy={true} smooth={true} offset={-50} duration={500} >
                                                 <ListItemText primary="SKILLS" />
                                             </Link>
                                         </ListItem>
-                                        <ListItem className={Styles.navLink}>
-                                            <Link to="projects" spy={true} smooth={true} offset={-50} duration={500} >
+                                        <ListItem className={Styles.navLink2}>
+                                            <Link activeClass="active" to="projects" spy={true} smooth={true} offset={-50} duration={500} >
                                                 <ListItemText primary="PROJECTS" />
                                             </Link>
                                         </ListItem>
-                                        <ListItem className={Styles.navLink}>
-                                            <Link to="papers" spy={true} smooth={true} offset={-50} duration={500} >
+                                        <ListItem className={Styles.navLink2}>
+                                            <Link activeClass="active" to="papers" spy={true} smooth={true} offset={-50} duration={500} >
                                                 <ListItemText primary="PAPERS" />
                                             </Link>
                                         </ListItem>
-                                        <ListItem className={Styles.navLink}>
-                                            <Link to="timeline" spy={true} smooth={true} offset={-50} duration={500} >
+                                        <ListItem className={Styles.navLink2}>
+                                            <Link activeClass="active" to="timeline" spy={true} smooth={true} offset={-50} duration={500} >
                                                 <ListItemText primary="TIMELINE" />
                                             </Link>
                                         </ListItem>
-                                        <ListItem className={Styles.navLink}>
-                                            <Link to="contact" spy={true} smooth={true} offset={-50} duration={500} >
+                                        <ListItem className={Styles.navLink2}>
+                                            <Link activeClass="active" to="contact" spy={true} smooth={true} offset={-50} duration={500} >
                                                 <ListItemText primary="CONTACT" />
                                             </Link>
                                         </ListItem>
-                                        <ListItem className={Styles.navLink}>
-                                            <a href="https://drive.google.com/file/d/104BElFusWYq6HvrSFBAB7fCKLfOo-3zg/view">
-                                                <ListItemText primary="RESUME" />
+                                        <ListItem className={Styles.navLink2}>
+                                            < AiOutlineFilePdf style={{ color: "white", marginRight: "5px" }} />
+                                            <a href="https://drive.google.com/file/d/104BElFusWYq6HvrSFBAB7fCKLfOo-3zg/view" target="_blank">
+                                                <ListItemText primary="RESUME" primaryTypographyProps={{ fontWeight: "bold" }} />
                                             </a>
                                         </ListItem>
 
@@ -307,85 +238,84 @@ function Nav(props) {
                 <Toolbar id="back-to-top-anchor" />
 
                 {/* mobile view 1*/}
+                <Box>
+                    <AppBar position="fixed" sx={{ display: { md: 'none', sm: 'block' }, backgroundColor: "black", }}>
+                        <Container >
+                            <Toolbar >
+                                <Box display='flex' flexGrow={1}  >
+                                    <Typography
+                                        variant="h5"
+                                        sx={{ flexGrow: 1, display: { xs: 'block', sm: 'block' }, color: "secondary.main", mt: 1, fontSize: "25px" }}
+                                    >
+                                        Ahmed Fakhry
+                                    </Typography>
+                                    <Box onClick={() => setOpen(!open)} sx={{ display: { md: 'none', sm: 'block' }, mt: 3, }}>
+                                        <Box className={open ? Styles.activeHamburger : Styles.hamburber}></Box>
+                                    </Box>
+                                    {/* <IconButton
+                                        onClick={() => setOpen(!open)}
+                                        sx={{ display: { md: 'none', sm: 'block' }, backgroundColor: "secondary.main", borderRadius: "10px", mt: 1, display: "flex" }}
 
-                <AppBar variant="permanent" position="fixed" sx={{ display: { md: 'none', sm: 'block' }, backgroundColor: "black", }}>
-                    <Container>
-                        <Toolbar >
-                            <Box display='flex' flexGrow={1} variant="permanent" >
-                                <Typography
-                                    variant="h5"
-                                    sx={{ flexGrow: 1, display: { xs: 'block', sm: 'block' }, color: "secondary.main", mt: 1, fontSize: "25px" }}
-                                >
-                                    Ahmed Fakhry
-                                </Typography>
-                                <IconButton
+                                    >
+                                        {!open ? <MenuIcon sx={{ color: "black" }} /> : <CloseIcon />}
+                                        <Typography variant='h6' sx={{ color: "black" }}>MENU</Typography>
 
-                                    variant="contained"
-                                    onClick={toggleDrawer('top', true)}
-                                    sx={{ display: { md: 'none', sm: 'block' }, backgroundColor: "secondary.main", borderRadius: "10px", mt: 1, display: "flex" }}
-                                    className={Styles.menuButton}
-                                >
-                                    {/* <Typography variant='h6' sx={{ color: "black" }}>MENU</Typography> */}
 
-                                    <MenuIcon sx={{ color: "black" }} />
-                                </IconButton>
+                                    </IconButton> */}
+                                </Box>
+                            </Toolbar>
+
+
+                            <Box className={open ? Styles.menuBoxactive : Styles.menuBox} variant="permanent" >
+                                {open && (
+                                    <List  >
+                                        <ListItem>
+                                            <Link to="about" spy={true} smooth={true} offset={-50} duration={500} >
+                                                <ListItemText primary="ABOUT" />
+                                            </Link>
+                                        </ListItem>
+                                        <ListItem>
+                                            <Link to="skill" spy={true} smooth={true} offset={-50} duration={500} >
+                                                <ListItemText primary="SKILLS" />
+                                            </Link>
+                                        </ListItem>
+                                        <ListItem>
+                                            <Link to="projects" spy={true} smooth={true} offset={-50} duration={500}>
+                                                <ListItemText primary="PROJECTS" />
+                                            </Link>
+                                        </ListItem>
+                                        <ListItem>
+                                            <Link to="papers" spy={true} smooth={true} offset={-50} duration={500}>
+                                                <ListItemText primary="PAPERS" />
+                                            </Link>
+                                        </ListItem>
+                                        <ListItem>
+                                            <Link to="timeline" spy={true} smooth={true} offset={-50} duration={500} >
+                                                <ListItemText primary="TIMELINE" />
+                                            </Link>
+                                        </ListItem>
+                                        <ListItem>
+                                            <Link to="contact" spy={true} smooth={true} offset={-50} duration={500}>
+                                                <ListItemText primary="CONTACT" />
+                                            </Link>
+                                        </ListItem>
+                                        <ListItem>
+                                            < AiOutlineFilePdf style={{ color: "white", marginRight: "5px" }} />
+                                            <a href="https://drive.google.com/file/d/104BElFusWYq6HvrSFBAB7fCKLfOo-3zg/view" target="_blank">
+                                                <ListItemText primary="RESUME" />
+                                            </a>
+                                        </ListItem>
+
+
+                                    </List>
+
+                                )}
+
                             </Box>
-                            <Drawer
+                        </Container>
+                    </AppBar>
 
-                                anchor={'top'}
-                                open={state['top']}
-                                onClose={toggleDrawer('top', false)}
-                            >
-                                {list('top')}
-                            </Drawer>
-                        </Toolbar>
-                        {/* <Box className={Styles.menuBox}>
-                            {open && (
-                                <List >
-                                    <ListItem>
-                                        <a href="#about">
-                                            <ListItemText primary="ABOUT" />
-                                        </a>
-                                    </ListItem>
-                                    <ListItem>
-                                        <a href="#skills">
-                                            <ListItemText primary="SKILLS" />
-                                        </a>
-                                    </ListItem>
-                                    <ListItem>
-                                        <a href="#projects">
-                                            <ListItemText primary="PROJECTS" />
-                                        </a>
-                                    </ListItem>
-                                    <ListItem>
-                                        <a href="#papers">
-                                            <ListItemText primary="PAPERS" />
-                                        </a>
-                                    </ListItem>
-                                    <ListItem>
-                                        <a href="#timeline">
-                                            <ListItemText primary="TIMELINE" />
-                                        </a>
-                                    </ListItem>
-                                    <ListItem>
-                                        <a href="#contact">
-                                            <ListItemText primary="CONTACT" />
-                                        </a>
-                                    </ListItem>
-                                    <ListItem>
-                                        <a href="#contact">
-                                            <ListItemText primary="RESUME" />
-                                        </a>
-                                    </ListItem>
-
-
-                                </List>
-
-                            )}
-
-                        </Box> */}
-                    </Container>
-                </AppBar>
+                </Box>
 
 
 

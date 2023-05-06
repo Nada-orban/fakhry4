@@ -6,6 +6,9 @@ import { styled, useTheme, alpha } from '@mui/material/styles';
 import TextField from '@mui/material/TextField';
 import Link from 'next/link'
 import { useForm, ValidationError } from '@formspree/react';
+import AttachEmailIcon from '@mui/icons-material/AttachEmail';
+import EmailIcon from '@mui/icons-material/Email';
+import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
 
 const ValidationTextField = styled(TextField)({
     '& input:valid + fieldset': {
@@ -34,20 +37,22 @@ function Contact() {
             <Container>
                 <Typography variant='h2' sx={{ textAlign: "center", fontWeight: "bold", my: 4 }}>Contact Me</Typography>
                 <Box display="flex" justifyContent="center" justifyItems="center">
-                    <Typography variant='h5' >Email:</Typography>
+                    <AttachEmailIcon sx={{ mt: "5px" }} />
+                    <Typography variant='h5' >:</Typography>
                     <Link href="mailto:ahmedfakhry805@gmail.com"  >
                         <Typography variant='h5' sx={{ color: "secondary.main" }} className={styles.linkText}> ahmedfakhry805@gmail.com</Typography>
                     </Link>
                 </Box>
                 <Box display="flex" justifyContent="center">
-                    <Typography variant='h5' >Phone:</Typography>
+                    <PhoneIphoneIcon sx={{ mt: "5px" }} />
+                    <Typography variant='h5' >:</Typography>
                     <Link href=""  >
                         <Typography variant='h5' sx={{ color: "secondary.main" }} className={styles.linkText}>(+20) 10-9813-0059</Typography>
                     </Link>
                 </Box>
-                <Typography variant='h6'>...or use the following form</Typography>
+                <Typography variant='h6' sx={{ mt: 4, color: "text.whitegray" }}>...or use the following form</Typography>
                 <form onSubmit={handleSubmit}  >
-                    <Grid container spacing={4} sx={{ my: 4 }}>
+                    <Grid container spacing={4} sx={{ my: 2 }}>
                         <Grid item xs={12} md={6} sx={{ display: "flex", flexDirection: "column", justifyContent: "space-between", gap: "40px" }}>
                             {/* <TextField
                                 variant="filled"
@@ -159,7 +164,7 @@ function Contact() {
                         </Grid>
 
                     </Grid>
-                    <button className={styles.normalButton} type="submit" >Send </button>
+                    <button className={styles.normalButton2} type="submit" >Send </button>
                 </form>
 
             </Container>

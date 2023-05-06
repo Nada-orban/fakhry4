@@ -9,7 +9,7 @@ export const themeSettongs = (mode) => {
             mode: mode,
             ...(mode === "light" ? {
                 primary: {
-                    main: grey[800],
+                    main: "#2988bc",
                 },
                 secondary: {
                     // main: red[400],
@@ -34,6 +34,7 @@ export const themeSettongs = (mode) => {
                 text: {
                     primary: 'black',
                     secondary: grey[800],
+                    whitegray: grey[400]
 
                 },
 

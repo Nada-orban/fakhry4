@@ -144,12 +144,33 @@
 .contactBox{
   text-align: center;
   color: white;
-  background-image:linear-gradient(to bottom, #00000080, rgba(83, 81, 81, 0.678)),
-  url(../../public/assets/close-up-man-checking-mobile.jpg); 
+  background-color: #212529;
+  background-image: url(../../public/assets/map-image\ \(1\).png);
+  /* background-image:linear-gradient(to bottom, #00000080, rgba(83, 81, 81, 0.678)),
+  url(../../public/assets/map-image\ \(1\).png);  */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   width: 100%;
   
 
+}
+
+.normalButton2 {
+  width: 200px;
+  margin: auto;
+  padding: 20px;
+  margin-top: 30px;
+  font-size: larger;
+  background-color: var(--primary-color);
+  border-style: none;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.normalButton2:hover {
+  background-color: var(--primary-color);
+  transform: scale(1.1);
+  transition: all 1s ease-in-out;
 }

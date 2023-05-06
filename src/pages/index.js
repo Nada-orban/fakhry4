@@ -68,7 +68,7 @@ export default function Home({ projects }) {
           </Grid>
           <Box display='flex' justifyContent="center" flexDirection="column" textAlign="center" marginTop="10px">
             <Typography variant='h4'>To see more of my projects...</Typography>
-            <button className={styles.normalButton}><a href=''>Visit My GitHub<GitHubIcon /></a></button>
+            <button className={styles.normalButton}><a href='https://github.com/AhmedFakhry47' target="_blank">Visit My GitHub<GitHubIcon /></a></button>
           </Box>
         </Container>
       </Box>

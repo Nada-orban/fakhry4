@@ -14,6 +14,7 @@ import Nav from './Nav'
 import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
 import { Link } from 'react-scroll'
 
+
 function Landing() {
     const colorMode = React.useContext(ColorModeContext);
     const theme = useTheme();
@@ -21,6 +22,7 @@ function Landing() {
         <Box className={styles.Landing} >
             <Box className={styles.overlay}>
                 <Nav />
+
                 <Box sx={{ display: "flex", flexDirection: "column", justifyContent: "center", textAlign: "center", }} className={styles.landingInfoBox}>
                     <Box border="6px solid white" borderRadius="50%" width="250px" height="250px" overflow="hidden" margin="auto" padding={"0px 0px"} >
                         <Image
@@ -38,24 +40,23 @@ function Landing() {
                         {/* <a href="https://www.facebook.com/2447.nada.samir">
                                 <Avatar className={styles.iconContact}  ><FacebookIcon /></Avatar>
                             </a> */}
-                        <a href=''>
+                        <a href='https://github.com/AhmedFakhry47' target="_blank">
                             <Avatar className={styles.iconContact} sx={{ backgroundColor: "black" }}  ><GitHubIcon /></Avatar>
                         </a>
-                        <a href=''>
+                        <a href='https://www.linkedin.com/in/ahmed-fakhry-5b178017a' target="_blank">
                             <Avatar className={styles.iconContact} sx={{ backgroundColor: "black" }}  ><LinkedInIcon /></Avatar></a>
-                        <a href=''>
+                        {/* <a href='(+20) 10-9813-0059' target="_blank">
                             <Avatar className={styles.iconContact} sx={{ backgroundColor: "black" }}  >< WhatsAppIcon /></Avatar>
-                        </a>
+                        </a> */}
 
-                        <a href=''>
+                        <a href='mailto:ahmedfakhry805@gmail.com' target="_blank">
                             <Avatar className={styles.iconContact} sx={{ backgroundColor: "black" }}  ><EmailIcon /></Avatar>
                         </a>
 
                     </Box>
 
                 </Box>
-                <Box
-                    justifyContent="center" mt="100px" sx={{ display: { xs: "none", sm: "flex" } }}>
+                <Box justifyContent="center" mt="230px" sx={{ display: { xs: "none", sm: "flex" } }}>
                     <Link to="about" spy={true} smooth={true} offset={-50} duration={500} >
                         <KeyboardDoubleArrowDownIcon sx={{
                             width: "50px", height: "50px", color: "secondary.main",

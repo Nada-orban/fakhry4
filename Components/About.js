@@ -17,6 +17,8 @@ import { Link } from 'react-scroll'
 import { AiOutlineFilePdf } from 'react-icons/ai'
 
 
+
+// (target="_blank") to make new tab when click to link
 function About() {
     const colorMode = React.useContext(ColorModeContext);
     const theme = useTheme();
@@ -44,21 +46,22 @@ function About() {
                                 {/* <a href="https://www.facebook.com/2447.nada.samir">
                                 <Avatar className={styles.iconContact}  ><FacebookIcon /></Avatar>
                             </a> */}
-                                <a href='https://github.com/AhmedFakhry47'>
+                                <a href='https://github.com/AhmedFakhry47' target="_blank">
                                     <Avatar className={styles.iconContact} sx={{ backgroundColor: "neutral.contact" }} ><GitHubIcon /></Avatar>
                                 </a>
-                                <a href='https://www.linkedin.com/in/ahmed-fakhry-5b178017a'>
+                                <a href='https://www.linkedin.com/in/ahmed-fakhry-5b178017a' target="_blank">
                                     <Avatar className={styles.iconContact} sx={{ backgroundColor: "neutral.contact" }}  ><LinkedInIcon /></Avatar></a>
-                                <a href='(+20) 10-9813-0059'>
+                                {/* <a href='(+20) 10-9813-0059' target="_blank">
                                     <Avatar className={styles.iconContact} sx={{ backgroundColor: "neutral.contact" }}  >< WhatsAppIcon /></Avatar>
-                                </a>
+                                </a> */}
 
-                                <a href='mailto:ahmedfakhry805@gmail.com'>
+                                <a href='mailto:ahmedfakhry805@gmail.com' target="_blank">
                                     <Avatar className={styles.iconContact} sx={{ backgroundColor: "neutral.contact" }}  ><EmailIcon /></Avatar>
                                 </a>
 
                             </Box>
                         </div>
+
 
 
 
@@ -75,7 +78,7 @@ function About() {
                         <Typography variant='h6' sx={{ color: "text.secondary" }}>I'm currently a graduate student working towards my Master of Engineering (M.Eng.) degree in Computer Science/Artificial Intelligence.</Typography>
                         <List >
                             <Typography variant='h4' sx={{ my: 1, fontWeight: "bold" }} >Education</Typography>
-                            <ListItem>
+                            <ListItem >
                                 <ListItemIcon>
                                     <SchoolIcon sx={{ color: "text.primary", width: "30px", height: "30px" }} />
                                 </ListItemIcon>
@@ -151,12 +154,12 @@ function About() {
 
                         </Grid>
                         <Grid item>
-                            <Link href="https://drive.google.com/file/d/104BElFusWYq6HvrSFBAB7fCKLfOo-3zg/view" >
+                            <a href="https://drive.google.com/file/d/104BElFusWYq6HvrSFBAB7fCKLfOo-3zg/view" target="_blank">
                                 <Paper elevation={3} sx={{ width: "150px", p: "20px 10px ", display: "flex", textAlign: "center", justifyContent: "center", cursor: "pointer", alignItems: "center", gap: "5px", backgroundColor: "neutral.lightblack", color: "white" }} className={styles.paperLink2}>
                                     <AiOutlineFilePdf />
                                     <Typography variant='h5' sx={{ textAlign: "center" }}>Resume</Typography>
                                 </Paper>
-                            </Link>
+                            </a>
 
                         </Grid>
                     </Grid>
