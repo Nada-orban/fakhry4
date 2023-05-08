@@ -2,16 +2,32 @@
 export const projectsdata = [{
 
     "id": 1,
-    "title": "AFIDs-macaca",
-    "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+    "title": "Digital Eye",
+    "body": "DEEP LEARNiNG ‐ CLOSED SOURCE",
     "pdf": "",
     "code": "",
     "poster": ""
 },
 {
     "id": 2,
-    "title": "AFIDs-macaca ksmd;lsa",
-    "body": "mclmxc quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+    "title": "Automated Interpretation of MRI‐Images",
+    "body": "DEEP LEARNiNG ‐ OPEN SOURCE",
+    "pdf": "",
+    "code": "",
+    "poster": ""
+},
+{
+    "id": 3,
+    "title": "Reviews to Stars",
+    "body": "DEEP LEARNiNG ‐ OPEN SOURCE",
+    "pdf": "",
+    "code": "",
+    "poster": ""
+},
+{
+    "id": 4,
+    "title": "You Only Look Faster ‐ Object Detection Model",
+    "body": "DEEP LEARNiNG ‐ BACHELOR’S GRADUATiON PROJECT",
     "pdf": "",
     "code": "",
     "poster": ""

@@ -26,7 +26,7 @@ function About() {
         <Box id="about" py="5vh" className={styles.aboutbackground} sx={{ width: "100vw", backgroundColor: "background.primary" }} >
             <Container>
                 <Grid container spacing={3}>
-                    <Grid item md={4} xs={12} sx={{ mb: 3, display: { xs: "none", sm: "flex" }, flexDirection: "column", justifyContent: "center" }} >
+                    <Grid item md={4} xs={12} sx={{ mb: 3, display: { xs: "none", md: "flex" }, flexDirection: "column", justifyContent: "center" }} >
                         {/* <Lottie animationData={jsonfile} /> */}
                         <div data-aos="zoom-in"
                             data-aos-mirror="true"
@@ -78,7 +78,7 @@ function About() {
                         <Typography variant='h6' sx={{ color: "text.secondary" }}>I'm currently a graduate student working towards my Master of Engineering (M.Eng.) degree in Computer Science/Artificial Intelligence.</Typography>
                         <List >
                             <Typography variant='h4' sx={{ my: 1, fontWeight: "bold" }} >Education</Typography>
-                            <ListItem >
+                            <ListItem display="flex" justifyContent="center" alignItems='center'>
                                 <ListItemIcon>
                                     <SchoolIcon sx={{ color: "text.primary", width: "30px", height: "30px" }} />
                                 </ListItemIcon>

@@ -37,15 +37,15 @@ function Contact() {
             <Container>
                 <Typography variant='h2' sx={{ textAlign: "center", fontWeight: "bold", my: 4 }}>Contact Me</Typography>
                 <Box display="flex" justifyContent="center" justifyItems="center">
-                    <AttachEmailIcon sx={{ mt: "5px" }} />
-                    <Typography variant='h5' >:</Typography>
+                    <AttachEmailIcon sx={{ mt: "5px", marginRight: "3px" }} />
+                    {/* <Typography variant='h5' >:</Typography> */}
                     <Link href="mailto:ahmedfakhry805@gmail.com"  >
                         <Typography variant='h5' sx={{ color: "secondary.main" }} className={styles.linkText}> ahmedfakhry805@gmail.com</Typography>
                     </Link>
                 </Box>
                 <Box display="flex" justifyContent="center">
                     <PhoneIphoneIcon sx={{ mt: "5px" }} />
-                    <Typography variant='h5' >:</Typography>
+                    {/* <Typography variant='h5' >:</Typography> */}
                     <Link href=""  >
                         <Typography variant='h5' sx={{ color: "secondary.main" }} className={styles.linkText}>(+20) 10-9813-0059</Typography>
                     </Link>

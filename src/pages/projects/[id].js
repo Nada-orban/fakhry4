@@ -2,6 +2,11 @@ import React from 'react'
 import Link from 'next/link'
 import { projectsdata } from '../../../data'
 import Nav from '../../../Components/Nav'
+import { Box, Tabs, Tab, Typography, LinkTab, Grid, Button, Container, Paper, List, ListItem, ListItemText, ListItemIcon, Avatar, Divider, } from '@mui/material'
+import styles from '../../styles/Home.module.css'
+import { ColorModeContext } from '../../../public/theme'
+import { styled, useTheme, alpha } from '@mui/material/styles';
+import Footer from '../../../Components/Footer'
 
 export const getStaticProps = async ({ params }) => {
     const projectsfilter = projectsdata.filter(p => p.id.toString() === params.id);
@@ -20,12 +25,24 @@ export const getStaticPaths = async () => {
 }
 
 function Details({ project }) {
+    const colorMode = React.useContext(ColorModeContext);
+    const theme = useTheme();
     return (
-        < >
+        <>
             <Nav />
-            <p>{project.id}</p>
+            <Box>
+                <Container>
 
-            <p>{project.body}</p>
+                    <p>{project.id}</p>
+
+                    <p>{project.body}</p>
+
+
+                </Container>
+
+            </Box>
+            <Divider />
+            <Footer />
         </>
     )
 

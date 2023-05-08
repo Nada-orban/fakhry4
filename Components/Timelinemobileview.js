@@ -72,7 +72,7 @@ function Timelinemobileview() {
                                 height={60}
                             />
                         </TimelineDot>
-                        <TimelineConnector sx={{ height: "500px" }} />
+                        <TimelineConnector sx={{ height: "490px" }} />
                     </TimelineSeparator>
                     <TimelineContent sx={{ py: '12px', px: 2 }}>
                         <Typography variant='subtitle1' sx={{ color: "text.secondary" }}>Jan 2022 ‐ Jan 2023</Typography>
@@ -102,7 +102,7 @@ function Timelinemobileview() {
                                 height={60}
                             />
                         </TimelineDot>
-                        <TimelineConnector sx={{ height: "250px" }} />
+                        <TimelineConnector sx={{ height: "230px" }} />
                     </TimelineSeparator>
                     <TimelineContent sx={{ py: '12px', px: 2 }}>
                         <Typography variant='subtitle1' sx={{ color: "text.secondary" }}>July 2021 ‐ Jan 2022</Typography>
@@ -156,7 +156,7 @@ function Timelinemobileview() {
                                 height={50}
                             />
                         </TimelineDot>
-                        <TimelineConnector sx={{ height: "500px" }} />
+                        <TimelineConnector sx={{ height: "450px" }} />
                     </TimelineSeparator>
                     <TimelineContent sx={{ py: '12px', px: 2 }}>
                         <Typography variant='subtitle1' sx={{ color: "text.secondary" }}>March 2021 ‐ June 2021</Typography>
@@ -187,7 +187,7 @@ function Timelinemobileview() {
                                 height={50}
                             />
                         </TimelineDot>
-                        <TimelineConnector sx={{ height: "650px" }} />
+                        <TimelineConnector sx={{ height: "580px" }} />
                     </TimelineSeparator>
                     <TimelineContent sx={{ py: '12px', px: 2 }}>
                         <Typography variant='subtitle1' sx={{ color: "text.secondary" }}>Oct 2020 ‐ Feb 2021</Typography>

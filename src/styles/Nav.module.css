@@ -18,10 +18,10 @@
     color: var(--secondary-color);
 
 }
-/* .menuBox{
+.menuBox{
     position: fixed;
     width: 100%;
-    transform: translateY(-100%);
+    transform: translateX(100%);
     transition: all 0.5s ease-in-out;
     z-index: 1;
     background-color: black;
@@ -32,12 +32,12 @@
 .menuBoxactive{
     position: fixed;
     width: 100%;
-    transform: translateY(0%);
+    transform: translateX(-4%);
     transition: all 0.5s ease-in-out;
     z-index: 1;
     background-color: black;
 
-} */
+}
 
 
 
@@ -64,6 +64,9 @@
     color: black;
     background-color: #ef5350;
 }
+
+
+
 
 
 /* //hamburger icon */
@@ -123,9 +126,66 @@
     transition: all 0.5s ease-in-out;
     transform: rotate(-45deg) translate(35px, 35px);
 
+    
+}
+
+/* //////// */
+.appbarmobile{
+    z-index: 1300 !important;
+}
+.listdrawermobile{
+    z-index: 1000 !important;
+    
+    
+}
+.navinfomobile{
+    z-index: 1500 !important;
 }
     
+
+/* nav3 */
+
     
+.container {
+    background: linear-gradient(315deg, #b1bfd8 0%, #667eaa 74%);
+}
+
+
+.wrapper {
+    padding: 20px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+}
+
+.sidenav {
+    position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(150deg, #b1bfd8 0%, #667eaa 74%);
+        transform: translateX(100%);
+        transition: all 0.5s ease-in-out;
+}
+
+
+.activeSidenav {
+    position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(150deg, #b1bfd8 0%, #667eaa 74%);
+        transform: translateX(50%);
+        transition: all 0.5s ease-in-out;
+}
+
+
+
+
+
+.a {
+    margin: 20px 0;
+        color: white;
+}
+
 
 
 

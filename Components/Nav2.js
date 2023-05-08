@@ -41,89 +41,80 @@ import { NodeNextRequest } from 'next/dist/server/base-http/node';
 import PropTypes from 'prop-types';
 import { Link } from 'react-scroll'
 import { AiOutlineFilePdf } from 'react-icons/ai'
-
-
-
-
 const drawerWidth = 240;
 
 
 
-
-//scroll top
-function ScrollTop(props) {
-    const { children, window } = props;
-    // Note that you normally won't need to set the window ref as useScrollTrigger
-    // will default to window.
-    // This is only being set here because the demo is in an iframe.
-    const trigger = useScrollTrigger({
-        target: window ? window() : undefined,
-        disableHysteresis: true,
-        threshold: 100,
-    });
-
-    const handleClick = (event) => {
-        const anchor = (event.target.ownerDocument || document).querySelector(
-            '#back-to-top-anchor',
-        );
-
-        if (anchor) {
-            anchor.scrollIntoView({
-                block: 'center',
-            });
-        }
-    };
-
-    return (
-        <Fade in={trigger}>
-            <Box
-                onClick={handleClick}
-                role="presentation"
-                sx={{ position: 'fixed', bottom: 16, right: 16 }}
-            >
-                {children}
-            </Box>
-        </Fade>
-    );
-}
-
-ScrollTop.propTypes = {
-    children: PropTypes.element.isRequired,
-    /**
-     * Injected by the documentation to work in an iframe.
-     * You won't need it on your project.
-     */
-    window: PropTypes.func,
-};
-
-
-
-
-
-
-
-
-
-
-
-
-// const useStyles = makeStyles((theme) => ({
-//     appBarTransparent: {
-//         backgroundColor: 'transparent',
-
-//     },
-//     appBarSolid: {
-//         backgroundColor: '#212529',
-
-//     }
-// }));
-
-
-function Nav(props) {
+function Nav2(props) {
     const colorMode = React.useContext(ColorModeContext);
     const theme = useTheme();
     const [mobileOpen, setMobileOpen] = React.useState(false);
     const [open, setOpen] = useState(false);
+
+    //right navbar at mobile view
+    const [state, setState] = React.useState({
+        right: false,
+    });
+    const toggleDrawer = (anchor, open) => (event) => {
+        if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+            return;
+        }
+
+        setState({ ...state, [anchor]: open });
+        setOpen(!open);
+    };
+    const list = (anchor) => (
+        <Box
+            className={Styles.listdrawermobile}
+            sx={{ width: 250 }}
+            role="presentation"
+            onClick={toggleDrawer("right", false)}
+            onKeyDown={toggleDrawer("right", false)}
+        >
+            <List sx={{ width: "200px", }} >
+                <ListItem>
+                    <Link to="about" spy={true} smooth={true} offset={-50} duration={500} >
+                        <ListItemText primary="ABOUT" />
+                    </Link>
+                </ListItem>
+                <ListItem>
+                    <Link to="skill" spy={true} smooth={true} offset={-50} duration={500} >
+                        <ListItemText primary="SKILLS" />
+                    </Link>
+                </ListItem>
+                <ListItem>
+                    <Link to="projects" spy={true} smooth={true} offset={-50} duration={500}>
+                        <ListItemText primary="PROJECTS" />
+                    </Link>
+                </ListItem>
+                <ListItem>
+                    <Link to="papers" spy={true} smooth={true} offset={-50} duration={500}>
+                        <ListItemText primary="PAPERS" />
+                    </Link>
+                </ListItem>
+                <ListItem>
+                    <Link to="timeline" spy={true} smooth={true} offset={-50} duration={500} >
+                        <ListItemText primary="TIMELINE" />
+                    </Link>
+                </ListItem>
+                <ListItem>
+                    <Link to="contact" spy={true} smooth={true} offset={-50} duration={500}>
+                        <ListItemText primary="CONTACT" />
+                    </Link>
+                </ListItem>
+                <ListItem>
+                    < AiOutlineFilePdf style={{ color: "white", marginRight: "5px" }} />
+                    <a href="https://drive.google.com/file/d/104BElFusWYq6HvrSFBAB7fCKLfOo-3zg/view" target="_blank">
+                        <ListItemText primary="RESUME" />
+                    </a>
+                </ListItem>
+
+
+            </List>
+        </Box>
+
+    )
+
 
 
     const handleDrawerToggle = () => {
@@ -134,36 +125,14 @@ function Nav(props) {
 
 
 
-    // Transparent to Solid Header on Scroll
-    // const classes = useStyles();
-    // const [navBackground, setNavBackground] = useState('appBarTransparent')
-    // const navRef = React.useRef()
-    // navRef.current = navBackground;
-    // useEffect(() => {
-    //     const handleScroll = () => {
-    //         const show = window.scrollY > 310
-    //         if (show) {
-    //             setNavBackground('appBarSolid')
-    //         } else {
-    //             setNavBackground('appBarTransparent')
-    //         }
-    //     }
-    //     document.addEventListener('scroll', handleScroll)
-    //     return () => {
-    //         document.removeEventListener('scroll', handleScroll)
-    //     }
-    // }, [])
 
-
-    //className={classes[navRef.current]} 
 
     return (
         <>
             <Box sx={{ display: 'flex' }} >
                 <CssBaseline />
-
                 <AppBar variant="permanent" position="fixed" sx={{
-                    background: 'black', color: "text:primary", borderStyle: "none", height: "60px"
+                    background: 'black', color: "text:primary", borderStyle: "none", height: "60px", zIndex: '1400',
                 }} >
                     <Container>
                         <Toolbar>
@@ -177,16 +146,6 @@ function Nav(props) {
 
                                 </Typography>
 
-
-                                {/* <IconButton
-                                    color="inherit"
-                                    aria-label="open drawer"
-                                    edge="start"
-                                    onClick={handleDrawerToggle}
-                                    sx={{ mr: 2, display: { sm: 'none' } }}
-                                >
-                                    <MenuIcon />
-                                </IconButton> */}
                                 <Box sx={{ display: { xs: "none", sm: 'none', md: 'block', } }}>
                                     <List sx={{ display: "flex" }}>
                                         <ListItem className={Styles.navLink2}>
@@ -239,23 +198,29 @@ function Nav(props) {
                     </Container>
 
                 </AppBar>
-                <Toolbar id="back-to-top-anchor" />
+
+
+
+
 
                 {/* mobile view 1*/}
                 <Box>
-                    <AppBar position="fixed" sx={{ display: { md: 'none', sm: 'block' }, backgroundColor: "black", }}>
+                    <AppBar position="fixed" sx={{ display: { md: 'none', sm: 'block' }, backgroundColor: "black", zIndex: (theme) => theme.zIndex.drawer + 1 }} className={Styles.appbarmobile} >
                         <Container >
                             <Toolbar >
-                                <Box display='flex' flexGrow={1}  >
+                                <Box display='flex' flexGrow={1} className={Styles.navinfomobile}>
                                     <Typography
                                         variant="h5"
                                         sx={{ flexGrow: 1, display: { xs: 'block', sm: 'block' }, color: "secondary.main", mt: 1, fontSize: "25px" }}
                                     >
                                         Ahmed Fakhry
                                     </Typography>
-                                    <Box onClick={() => setOpen(!open)} sx={{ display: { md: 'none', sm: 'block' }, mt: 3, }}>
+                                    <Box onClick={toggleDrawer("right", true)} sx={{ display: { md: 'none', sm: 'block' }, mt: 3, zIndex: '1600' }}>
                                         <Box className={open ? Styles.activeHamburger : Styles.hamburber}></Box>
                                     </Box>
+                                    {/* <Box onClick={() => setOpen(!open)} sx={{ display: { md: 'none', sm: 'block' }, mt: 3, }}>
+                                        <Box className={open ? Styles.activeHamburger : Styles.hamburber}></Box>
+                                    </Box> */}
                                     {/* <IconButton
                                         onClick={() => setOpen(!open)}
                                         sx={{ display: { md: 'none', sm: 'block' }, backgroundColor: "secondary.main", borderRadius: "10px", mt: 1, display: "flex" }}
@@ -268,56 +233,22 @@ function Nav(props) {
                                     </IconButton> */}
                                 </Box>
                             </Toolbar>
-
-
-                            <Box className={open ? Styles.menuBoxactive : Styles.menuBox} variant="permanent" BackdropProps={{ invisible: false }}>
-                                {open && (
-                                    <List  >
-                                        <ListItem>
-                                            <Link to="about" spy={true} smooth={true} offset={-50} duration={500} >
-                                                <ListItemText primary="ABOUT" />
-                                            </Link>
-                                        </ListItem>
-                                        <ListItem>
-                                            <Link to="skill" spy={true} smooth={true} offset={-50} duration={500} >
-                                                <ListItemText primary="SKILLS" />
-                                            </Link>
-                                        </ListItem>
-                                        <ListItem>
-                                            <Link to="projects" spy={true} smooth={true} offset={-50} duration={500}>
-                                                <ListItemText primary="PROJECTS" />
-                                            </Link>
-                                        </ListItem>
-                                        <ListItem>
-                                            <Link to="papers" spy={true} smooth={true} offset={-50} duration={500}>
-                                                <ListItemText primary="PAPERS" />
-                                            </Link>
-                                        </ListItem>
-                                        <ListItem>
-                                            <Link to="timeline" spy={true} smooth={true} offset={-50} duration={500} >
-                                                <ListItemText primary="TIMELINE" />
-                                            </Link>
-                                        </ListItem>
-                                        <ListItem>
-                                            <Link to="contact" spy={true} smooth={true} offset={-50} duration={500}>
-                                                <ListItemText primary="CONTACT" />
-                                            </Link>
-                                        </ListItem>
-                                        <ListItem>
-                                            < AiOutlineFilePdf style={{ color: "white", marginRight: "5px" }} />
-                                            <a href="https://drive.google.com/file/d/104BElFusWYq6HvrSFBAB7fCKLfOo-3zg/view" target="_blank">
-                                                <ListItemText primary="RESUME" />
-                                            </a>
-                                        </ListItem>
-
-
-                                    </List>
-
-                                )}
-
-                            </Box>
                         </Container>
                     </AppBar>
+                    <Drawer
+                        variant="permanent"
+                        sx={{
+                            [`& .MuiDrawer-paper`]: { width: "100%", boxSizing: 'border-box', },
+                        }}
+                        className={Styles.drawermobile}
+                        anchor={"top"}
+                        open={state["top"]}
+                        onClose={toggleDrawer("top", false)}
+                    >
+                        {list("top")}
+                        <Toolbar />
+                    </Drawer>
+
 
                 </Box>
 
@@ -327,12 +258,7 @@ function Nav(props) {
 
 
             </Box >
-            <ScrollTop {...props}>
-                <Fab size="small" aria-label="scroll back to top" >
-                    <KeyboardArrowUpIcon />
-                </Fab>
 
-            </ScrollTop>
 
         </>
     )
@@ -340,5 +266,5 @@ function Nav(props) {
 
 
 
-export default Nav
+export default Nav2
 

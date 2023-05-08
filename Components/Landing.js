@@ -19,7 +19,7 @@ function Landing() {
     const colorMode = React.useContext(ColorModeContext);
     const theme = useTheme();
     return (
-        <Box className={styles.Landing} >
+        <Box id="landing" className={styles.Landing} >
             <Box className={styles.overlay}>
                 <Nav />
 
@@ -36,7 +36,7 @@ function Landing() {
                     <Typography variant='h2' sx={{ color: "white", mt: "30px", fontWeight: "bold" }}>Ahmed Fakhry</Typography>
                     <Typography variant='h6' sx={{ color: "white", fontStyle: "italic" }}>Machine Learning Developer at OpenAI</Typography>
 
-                    <Box gap="15px" my="20px" justifyContent="center" sx={{ display: { xs: "flex", sm: "none" } }}>
+                    <Box gap="15px" my="20px" justifyContent="center" sx={{ display: { xs: "flex", md: "none" } }}>
                         {/* <a href="https://www.facebook.com/2447.nada.samir">
                                 <Avatar className={styles.iconContact}  ><FacebookIcon /></Avatar>
                             </a> */}
@@ -56,7 +56,7 @@ function Landing() {
                     </Box>
 
                 </Box>
-                <Box justifyContent="center" mt="230px" sx={{ display: { xs: "none", sm: "flex" } }}>
+                <Box justifyContent="center" mb="10px" sx={{ display: { xs: "none", md: "flex" } }}>
                     <Link to="about" spy={true} smooth={true} offset={-50} duration={500} >
                         <KeyboardDoubleArrowDownIcon sx={{
                             width: "50px", height: "50px", color: "secondary.main",
