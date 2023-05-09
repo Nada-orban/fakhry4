@@ -208,7 +208,7 @@ function Nav(props) {
                                 <Typography
                                     className={navbar ? Styles.namelogoactive : Styles.namelogo}
                                     variant="h4"
-                                    sx={{ flexGrow: 1, display: { xs: 'none', md: 'block' }, color: "secondary.main", mt: 1.5, fontWeight: "bold" }}
+                                    sx={{ flexGrow: 1, display: { xs: 'none', md: 'block' }, color: "secondary.main", mt: 1, fontWeight: "bold" }}
                                 >
                                     <Link to="landing" spy={true} smooth={true} offset={-50} duration={500}>Ahmed Fakhry</Link>
 
