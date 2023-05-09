@@ -21,12 +21,12 @@
 
 .namelogo{
     font-size: 30px;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out !important;
 
 }
 .namelogoactive{
     font-size:25px ; 
-    transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out !important;
 }
 .Appbar{
     background: transparent !important;
@@ -34,13 +34,13 @@
     justify-content: center;
     align-items: center;
     top: 0px;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out !important;
     padding: 10px 0px;
     
 }
 .Appbaractive{
     background-color:black !important;
-    transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out !important;
     padding: 5px 0px;
     height: 60px;
     
