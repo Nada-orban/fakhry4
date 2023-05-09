@@ -18,6 +18,33 @@
     color: var(--secondary-color);
 
 }
+
+.namelogo{
+    font-size: 30px;
+    transition: all 0.5s ease-in-out;
+
+}
+.namelogoactive{
+    font-size:25px ; 
+    transition: all 0.5s ease-in-out;
+}
+.Appbar{
+    background: transparent;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    top: 0px;
+    transition: all 0.5s ease-in-out;
+    padding: 10px 0px;
+    
+}
+.Appbaractive{
+    background-color:black;
+    transition: all .5s ease-in-out;
+    padding: 5px 0px;
+    height: 60px;
+    
+}
 .menuBox{
     position: fixed;
     width: 100%;
@@ -37,8 +64,11 @@
     z-index: 1;
     background-color: black;
 
+    
 }
-
+.appbarmobile {
+    z-index: 5 !important;
+}
 
 
 .icon{
@@ -64,6 +94,7 @@
     color: black;
     background-color: #ef5350;
 }
+
 
 
 
@@ -130,7 +161,7 @@
 }
 
 /* //////// */
-.appbarmobile{
+/* .appbarmobile{
     z-index: 1300 !important;
 }
 .listdrawermobile{
@@ -141,7 +172,7 @@
 .navinfomobile{
     z-index: 1500 !important;
 }
-    
+     */
 
 /* nav3 */
 

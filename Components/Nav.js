@@ -124,11 +124,35 @@ function Nav(props) {
     const theme = useTheme();
     const [mobileOpen, setMobileOpen] = React.useState(false);
     const [open, setOpen] = useState(false);
+    const [navbar, setNavbar] = useState(false)
+
 
 
     const handleDrawerToggle = () => {
         setMobileOpen((prevState) => !prevState);
     };
+
+
+
+    //background changing function
+    useEffect(() => {
+        const changeBackground = () => {
+            if (window.scrollY >= 80) {
+                setNavbar(true);
+            } else {
+                setNavbar(false);
+            }
+        }
+        window.addEventListener('scroll', changeBackground);
+
+
+    }, [])
+
+
+
+
+
+
 
 
 
@@ -155,7 +179,19 @@ function Nav(props) {
     // }, [])
 
 
-    //className={classes[navRef.current]} 
+    //className={classes[navRef.current]}
+
+
+
+
+
+    //background changing function
+
+
+
+
+
+
 
     return (
         <>
@@ -163,15 +199,16 @@ function Nav(props) {
                 <CssBaseline />
 
                 <AppBar variant="permanent" position="fixed" sx={{
-                    background: 'black', color: "text:primary", borderStyle: "none", height: "60px"
-                }} >
+                    color: "text:primary", borderStyle: "none", height: "60px", background: "black"
+                }} className={navbar ? Styles.Appbaractive : Styles.Appbar}>
                     <Container>
                         <Toolbar>
                             <Box display='flex' flexGrow={1}>
 
                                 <Typography
+                                    className={navbar ? Styles.namelogoactive : Styles.namelogo}
                                     variant="h4"
-                                    sx={{ flexGrow: 1, display: { xs: 'block', sm: 'block' }, color: "secondary.main", mt: 1.5, fontSize: "25px" }}
+                                    sx={{ flexGrow: 1, display: { xs: 'none', md: 'block' }, color: "secondary.main", mt: 1.5, fontWeight: "bold" }}
                                 >
                                     <Link to="landing" spy={true} smooth={true} offset={-50} duration={500}>Ahmed Fakhry</Link>
 
@@ -249,7 +286,7 @@ function Nav(props) {
                                 <Box display='flex' flexGrow={1}  >
                                     <Typography
                                         variant="h5"
-                                        sx={{ flexGrow: 1, display: { xs: 'block', sm: 'block' }, color: "secondary.main", mt: 1, fontSize: "25px" }}
+                                        sx={{ flexGrow: 1, color: "secondary.main", mt: 1, fontSize: "25px", }}
                                     >
                                         Ahmed Fakhry
                                     </Typography>

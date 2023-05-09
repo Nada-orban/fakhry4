@@ -33,8 +33,8 @@ function Landing() {
 
                         />
                     </Box>
-                    <Typography variant='h2' sx={{ color: "white", mt: "30px", fontWeight: "bold" }}>Ahmed Fakhry</Typography>
-                    <Typography variant='h6' sx={{ color: "white", fontStyle: "italic" }}>Machine Learning Developer at OpenAI</Typography>
+                    <Typography variant='h1' sx={{ color: "white", mt: "30px", fontWeight: "bold" }}>Ahmed Fakhry</Typography>
+                    <Typography variant='h4' sx={{ color: "white", fontStyle: "italic" }}>Machine Learning Developer at OpenAI</Typography>
 
                     <Box gap="15px" my="20px" justifyContent="center" sx={{ display: { xs: "flex", md: "none" } }}>
                         {/* <a href="https://www.facebook.com/2447.nada.samir">
@@ -56,7 +56,7 @@ function Landing() {
                     </Box>
 
                 </Box>
-                <Box justifyContent="center" mb="10px" sx={{ display: { xs: "none", md: "flex" } }}>
+                <Box justifyContent="center" mt="20px" sx={{ display: { xs: "none", md: "flex" } }}>
                     <Link to="about" spy={true} smooth={true} offset={-50} duration={500} >
                         <KeyboardDoubleArrowDownIcon sx={{
                             width: "50px", height: "50px", color: "secondary.main",
