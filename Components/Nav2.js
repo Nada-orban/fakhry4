@@ -117,9 +117,9 @@ function Nav2(props) {
 
 
 
-    const handleDrawerToggle = () => {
-        setMobileOpen((prevState) => !prevState);
-    };
+    // const handleDrawerToggle = () => {
+    //     setMobileOpen((prevState) => !prevState);
+    // };
 
 
 
