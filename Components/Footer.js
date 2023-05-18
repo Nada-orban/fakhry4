@@ -36,10 +36,10 @@ function Footer() {
                 </Grid>
                 <Grid xs={12} md={6} >
                     <Box display="flex" justifyContent="center" alignItems="center" gap="20px" >
-                        <Link href="mailto:nadasamir9334@gmail.com" ><Avatar sx={{ width: "30px", height: "30px", backgroundColor: "secondary.main", }}><EmailIcon /></Avatar></Link>
-                        <Link href="https://www.linkedin.com/in/nada-samir-441a58130/" ><Avatar sx={{ width: "30px", height: "30px", backgroundColor: "secondary.main", }}><FiLinkedin /></Avatar></Link>
-                        <Link href="https://github.com/Nada-orban" ><Avatar sx={{ width: "30px", height: "30px", backgroundColor: "secondary.main", }}><FiGithub /></Avatar></Link>
-                        <Link href="https://www.upwork.com/freelancers/~0158c861bae4be2e7b" ><Avatar sx={{ width: "30px", height: "30px", backgroundColor: "secondary.main", }}><SiUpwork /></Avatar></Link>
+                        <Link href="mailto:nadasamir9334@gmail.com" ><Avatar sx={{ width: "30px", height: "30px", backgroundColor: "secondary.main", }} className={styles.frontendavatar}><EmailIcon /></Avatar></Link>
+                        <Link href="https://www.linkedin.com/in/nada-samir-441a58130/" ><Avatar sx={{ width: "30px", height: "30px", backgroundColor: "secondary.main", }} className={styles.frontendavatar}><FiLinkedin /></Avatar></Link>
+                        <Link href="https://github.com/Nada-orban" ><Avatar sx={{ width: "30px", height: "30px", backgroundColor: "secondary.main", }} className={styles.frontendavatar}><FiGithub /></Avatar></Link>
+                        <Link href="https://www.upwork.com/freelancers/~0158c861bae4be2e7b" ><Avatar sx={{ width: "30px", height: "30px", backgroundColor: "secondary.main", }} className={styles.frontendavatar}><SiUpwork /></Avatar></Link>
                     </Box>
                 </Grid>
             </Grid>
