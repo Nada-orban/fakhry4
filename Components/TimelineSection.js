@@ -80,13 +80,16 @@ function TimelineSection() {
                                 P.E.R PARTNERS
                             </Typography>
                             <Typography variant='h6' sx={{ fontWeight: "bold" }}>UK ‐ Remote</Typography>
-                            <Typography variant='h6' >
-                                •Lead a team of four data scientists where I was responsible for developing the company’s
-                                flagship product, Digital Eye, alongside other products such as Drug Interaction Checker.<br />
-                                •Digital Eye is based on a deep learning model for digitizing handwritten documents<br />
-                                •Carried out research and built the core understanding of the company performance metrics
-                                to qualitatively inform and interpret models<br />
-                                •Was responsible for supporting the growth and professional development of the team.
+                            <Typography variant='h6' sx={{ textAlign: "start" }} >
+                                <ul>
+                                    <li>Lead a team of four data scientists where I was responsible for developing the company’s
+                                        flagship product, Digital Eye, alongside other products such as Drug Interaction Checker.</li>
+                                    <li>Digital Eye is based on a deep learning model for digitizing handwritten documents</li>
+                                    <li>Carried out research and built the core understanding of the company performance metrics
+                                        to qualitatively inform and interpret models</li>
+                                    <li>Was responsible for supporting the growth and professional development of the team.</li>
+                                </ul>
+
                             </Typography>
                         </TimelineContent>
                     </TimelineItem>
@@ -136,11 +139,15 @@ function TimelineSection() {
                                 UNiVERSiTY OF BERGEN
                             </Typography>
                             <Typography variant='h6' sx={{ fontWeight: "bold" }}>Bergen, Norway ‐ Remote</Typography>
-                            <Typography variant='h6'>
-                                • Worked on a research project to create a deep learning model to detect gene‐gene
-                                interactions from gene expression data.<br />
-                                • Used findr tool to preprocess yeast gene expressions.<br />
-                                • Responsible for designing, training, and evaluating the performance of the deep learning model.</Typography>
+                            <Typography variant='h6' sx={{ textAlign: "start" }}>
+                                <ul>
+                                    <li>Worked on a research project to create a deep learning model to detect gene‐gene
+                                        interactions from gene expression data.</li>
+                                    <li>Used findr tool to preprocess yeast gene expressions.</li>
+                                    <li> Responsible for designing, training, and evaluating the performance of the deep learning model.</li>
+                                </ul>
+
+                            </Typography>
                         </TimelineContent>
                     </TimelineItem>
                     <TimelineItem>
@@ -163,7 +170,7 @@ function TimelineSection() {
                                 ViRUFY
                             </Typography>
                             <Typography variant='h6' sx={{ fontWeight: "bold" }}>San Francisco, US ‐ Remote</Typography>
-                            <Typography variant='h6'>
+                            <Typography variant='h6' sx={{ textAlign: "start" }}>
                                 <ul>
                                     <li>Was responsible for all phases of deploying machine learning models in production, deciding on
                                         performance, fine‐tuning the model on clinical datasets, Testing APIs, etc.</li>
