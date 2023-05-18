@@ -186,6 +186,12 @@ function Nav(props) {
 
 
     //background changing function
+    const NavLinks = styled(Link)`
+  color: white;
+  &.active {
+    color: #ffa000;
+  }
+`;
 
 
 
@@ -227,34 +233,34 @@ function Nav(props) {
                                 <Box sx={{ display: { xs: "none", sm: 'none', md: 'block', } }}>
                                     <List sx={{ display: "flex" }}>
                                         <ListItem className={Styles.navLink2}>
-                                            <Link activeClass="active" to="about" spy={true} smooth={true} offset={-50} duration={500}  >
+                                            <NavLinks activeClass="active" to="about" spy={true} smooth={true} offset={-50} duration={500}  >
                                                 <ListItemText primary="ABOUT" />
-                                            </Link>
+                                            </NavLinks>
                                         </ListItem>
                                         <ListItem className={Styles.navLink2}>
-                                            <Link activeClass="active" to="skill" spy={true} smooth={true} offset={-50} duration={500} >
+                                            <NavLinks activeClass="active" to="skill" spy={true} smooth={true} offset={-50} duration={500} >
                                                 <ListItemText primary="SKILLS" />
-                                            </Link>
+                                            </NavLinks>
                                         </ListItem>
                                         <ListItem className={Styles.navLink2}>
-                                            <Link activeClass="active" to="projects" spy={true} smooth={true} offset={-50} duration={500} >
+                                            <NavLinks activeClass="active" to="projects" spy={true} smooth={true} offset={-50} duration={500} >
                                                 <ListItemText primary="PROJECTS" />
-                                            </Link>
+                                            </NavLinks>
                                         </ListItem>
                                         <ListItem className={Styles.navLink2}>
-                                            <Link activeClass="active" to="papers" spy={true} smooth={true} offset={-50} duration={500} >
+                                            <NavLinks activeClass="active" to="papers" spy={true} smooth={true} offset={-50} duration={500} >
                                                 <ListItemText primary="PAPERS" />
-                                            </Link>
+                                            </NavLinks>
                                         </ListItem>
                                         <ListItem className={Styles.navLink2}>
-                                            <Link activeClass="active" to="timeline" spy={true} smooth={true} offset={-50} duration={500} >
+                                            <NavLinks activeClass="active" to="timeline" spy={true} smooth={true} offset={-50} duration={500} >
                                                 <ListItemText primary="TIMELINE" />
-                                            </Link>
+                                            </NavLinks>
                                         </ListItem>
                                         <ListItem className={Styles.navLink2}>
-                                            <Link activeClass="active" to="contact" spy={true} smooth={true} offset={-50} duration={500} >
+                                            <NavLinks activeClass="active" to="contact" spy={true} smooth={true} offset={-50} duration={500} >
                                                 <ListItemText primary="CONTACT" />
-                                            </Link>
+                                            </NavLinks>
                                         </ListItem>
                                         <ListItem className={Styles.navLink2}>
                                             < AiOutlineFilePdf style={{ color: "white", marginRight: "5px" }} />
@@ -263,9 +269,9 @@ function Nav(props) {
                                             </a>
                                         </ListItem>
 
-                                        <IconButton sx={{ ml: 1 }} onClick={colorMode.toggleColorMode} color="inherit">
+                                        {/* <IconButton sx={{ ml: 1 }} onClick={colorMode.toggleColorMode} color="inherit">
                                             {theme.palette.mode === 'dark' ? <LightModeIcon sx={{ color: "secondary.main" }} /> : <NightlightRoundIcon sx={{ color: "white" }} />}
-                                        </IconButton>
+                                        </IconButton> */}
                                     </List>
                                 </Box>
 
