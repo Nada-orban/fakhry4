@@ -20,10 +20,11 @@ import { FcGoogle } from 'react-icons/fc'
 import Image from 'next/image'
 import alexunversity from '../public/assets/download.jpeg'
 import { NoEncryption } from '@mui/icons-material';
-import openaiphoto from '../public/assets/timeline/contact-helpdesk-customer-service-spaceship-graphic-concept.jpg'
+import openaiphoto from '../public/assets/timeline/1681039084chatgpt-icon.png'
 import perphoto from '../public/assets/timeline/download.jpeg'
 import bergenphoto from '../public/assets/timeline/Uni-Bergen-emblem.png'
 import virufyphoto from '../public/assets/timeline/virufy-logo-white-brackground-small.webp'
+import Liverpoolphoto from '../public/assets/timeline/Liverpool-John-Moores.png'
 import Timelinemobileview from './Timelinemobileview';
 
 function TimelineSection() {
@@ -37,12 +38,12 @@ function TimelineSection() {
                 <Timeline position="alternate" sx={{ my: 5, display: { xs: "none", sm: "block" } }}>
                     <TimelineItem>
                         <TimelineSeparator >
-                            <TimelineDot color="primary" variant="outlined" sx={{ width: "150px", height: "150px", overflow: "hidden", border: "2px solid #bdbdbd", padding: "5px" }}>
+                            <TimelineDot color="primary" variant="outlined" sx={{ width: "150px", height: "150px", overflow: "hidden", border: "2px solid #bdbdbd", padding: "0px" }}>
                                 <Image
                                     src={openaiphoto}
                                     alt="Picture of the author"
-                                    width={140}
-                                    height={140}
+                                    width={150}
+
                                 />
                             </TimelineDot>
                             <TimelineConnector sx={{ height: "100px" }} />
@@ -59,6 +60,29 @@ function TimelineSection() {
                                     <li>Working on the tether project.</li>
                                     <li>Helping reinforcement learning models to fine‐tune and enhance chatgpt performance.</li>
                                 </ul></Typography>
+                        </TimelineContent>
+                    </TimelineItem>
+                    <TimelineItem>
+                        <TimelineSeparator >
+                            <TimelineDot color="primary" variant="outlined" sx={{ width: "150px", height: "150px", overflow: "hidden", border: "2px solid #bdbdbd", padding: "0px" }}>
+                                <Image
+                                    src={Liverpoolphoto}
+                                    alt="Picture of the author"
+                                    width={150}
+
+                                />
+                            </TimelineDot>
+                            <TimelineConnector sx={{ height: "80px" }} />
+                        </TimelineSeparator>
+                        <TimelineContent sx={{ py: '12px', px: 2 }}>
+                            <Typography variant='subtitle1' sx={{ color: "text.secondary" }}>Feb 2023 ‐ Now</Typography>
+                            <Typography variant='h5' sx={{ fontWeight: "bold" }}>M.SC in computing and information systems</Typography>
+                            <Typography variant="h4" component="span" sx={{ color: "secondary.main", fontWeight: "bold" }}>
+                                Liverpool John Moores University
+                            </Typography>
+                            <Typography variant='h6' sx={{ fontWeight: "bold" }}>Liverpool - Remote</Typography>
+                            <Typography variant='h6'>
+                                • Topics: Computer Systems, Software Development.</Typography>
                         </TimelineContent>
                     </TimelineItem>
                     <TimelineItem>
@@ -232,12 +256,13 @@ function TimelineSection() {
                         </TimelineSeparator>
                         <TimelineContent sx={{ py: '12px', px: 2 }}>
                             <Typography variant='subtitle1' sx={{ color: "text.secondary" }}>Sep 2015 ‐ Aug 2020</Typography>
+                            <Typography variant='h5' sx={{ fontWeight: "bold" }}>B.SC in electronics and communication engineering</Typography>
                             <Typography variant="h4" component="span" sx={{ color: "secondary.main", fontWeight: "bold" }}>
                                 Faculty of Engineering
                             </Typography>
                             <Typography variant='h6' sx={{ fontWeight: "bold" }}>Alexandria</Typography>
-                            <Typography variant='h6'>B.SC in electronics and communication engineering
-                                <br />• Cumulative Grade: 72.8% (Good).</Typography>
+                            <Typography variant='h6'>
+                                • Cumulative Grade: 72.8% (Good)</Typography>
                         </TimelineContent>
                     </TimelineItem>
                 </Timeline>

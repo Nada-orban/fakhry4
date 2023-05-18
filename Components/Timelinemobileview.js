@@ -20,10 +20,11 @@ import { FcGoogle } from 'react-icons/fc'
 import Image from 'next/image'
 import alexunversity from '../public/assets/download.jpeg'
 import { NoEncryption } from '@mui/icons-material';
-import openaiphoto from '../public/assets/timeline/contact-helpdesk-customer-service-spaceship-graphic-concept.jpg'
+import openaiphoto from '../public/assets/timeline/1681039084chatgpt-icon.png'
 import perphoto from '../public/assets/timeline/download.jpeg'
 import bergenphoto from '../public/assets/timeline/Uni-Bergen-emblem.png'
 import virufyphoto from '../public/assets/timeline/virufy-logo-white-brackground-small.webp'
+import Liverpoolphoto from '../public/assets/timeline/Liverpool-John-Moores.png'
 
 function Timelinemobileview() {
     return (
@@ -37,15 +38,15 @@ function Timelinemobileview() {
             }} >
                 <TimelineItem>
                     <TimelineSeparator >
-                        <TimelineDot color="primary" variant="outlined" sx={{ width: "70px", height: "70px", overflow: "hidden", border: "2px solid #bdbdbd", padding: "5px" }}>
+                        <TimelineDot color="primary" variant="outlined" sx={{ width: "70px", height: "70px", overflow: "hidden", border: "2px solid #bdbdbd", padding: "0px" }}>
                             <Image
                                 src={openaiphoto}
                                 alt="Picture of the author"
-                                width={60}
-                                height={60}
+                                width={70}
+
                             />
                         </TimelineDot>
-                        <TimelineConnector sx={{ height: "200px" }} />
+                        <TimelineConnector sx={{ height: "150px" }} />
                     </TimelineSeparator>
                     <TimelineContent sx={{ py: '12px', px: 2 }}>
                         <Typography variant='subtitle1' sx={{ color: "text.secondary" }}>Nov 2022 ‐ Now</Typography>
@@ -62,32 +63,28 @@ function Timelinemobileview() {
                     </TimelineContent>
                 </TimelineItem>
                 <TimelineItem>
-                    <TimelineSeparator>
-                        <TimelineConnector />
+                    <TimelineSeparator >
                         <TimelineDot color="primary" variant="outlined" sx={{ width: "70px", height: "70px", overflow: "hidden", border: "2px solid #bdbdbd", padding: "0px" }}>
                             <Image
-                                src={perphoto}
+                                src={Liverpoolphoto}
                                 alt="Picture of the author"
-                                width={60}
-                                height={60}
+                                width={70}
+
                             />
                         </TimelineDot>
-                        <TimelineConnector sx={{ height: "490px" }} />
+                        <TimelineConnector sx={{ height: "100px" }} />
                     </TimelineSeparator>
                     <TimelineContent sx={{ py: '12px', px: 2 }}>
-                        <Typography variant='subtitle1' sx={{ color: "text.secondary" }}>Jan 2022 ‐ Jan 2023</Typography>
-                        <Typography variant='h6' sx={{ fontWeight: "bold" }}>Lead Data Scientist</Typography>
+                        <Typography variant='subtitle1' sx={{ color: "text.secondary" }}>Feb 2023 ‐ Now</Typography>
+                        <Typography variant='h6' sx={{ fontWeight: "bold" }}>M.SC in computing and information systems</Typography>
                         <Typography variant="h5" component="span" sx={{ color: "secondary.main", fontWeight: "bold" }}>
-                            P.E.R PARTNERS
+                            Liverpool John Moores University
                         </Typography>
-                        <Typography variant='subtitle1' sx={{ fontWeight: "bold" }}>UK ‐ Remote</Typography>
-                        <Typography variant='subtitle1' >
-                            Lead a team of four data scientists where I was responsible for developing the company’s
-                            flagship product, Digital Eye, alongside other products such as Drug Interaction Checker,
-                            Digital Eye is based on a deep learning model for digitizing handwritten documents,
-                            Carried out research and built the core understanding of the company performance metrics
-                            to qualitatively inform and interpret models,
-                            Was responsible for supporting the growth and professional development of the team.
+                        <Typography variant='subtitle1' sx={{ fontWeight: "bold" }}>Liverpool - Remote</Typography>
+                        <Typography variant='subtitle1'>
+                            <ul>
+                                <li>Topics: Computer Systems, Software Development</li>
+                            </ul>
                         </Typography>
                     </TimelineContent>
                 </TimelineItem>
@@ -102,7 +99,41 @@ function Timelinemobileview() {
                                 height={60}
                             />
                         </TimelineDot>
-                        <TimelineConnector sx={{ height: "230px" }} />
+                        <TimelineConnector sx={{ height: "340px" }} />
+                    </TimelineSeparator>
+                    <TimelineContent sx={{ py: '12px', px: 2 }}>
+                        <Typography variant='subtitle1' sx={{ color: "text.secondary" }}>Jan 2022 ‐ Jan 2023</Typography>
+                        <Typography variant='h6' sx={{ fontWeight: "bold" }}>Lead Data Scientist</Typography>
+                        <Typography variant="h5" component="span" sx={{ color: "secondary.main", fontWeight: "bold" }}>
+                            P.E.R PARTNERS
+                        </Typography>
+                        <Typography variant='subtitle1' sx={{ fontWeight: "bold" }}>UK ‐ Remote</Typography>
+                        <Typography variant='subtitle1' >
+
+                            <ul>
+                                <li>Lead a team of four data scientists where I was responsible for developing the company’s
+                                    flagship product, Digital Eye, alongside other products such as Drug Interaction Checker.</li>
+                                <li>Digital Eye is based on a deep learning model for digitizing handwritten documents</li>
+                                <li>Carried out research and built the core understanding of the company performance metrics
+                                    to qualitatively inform and interpret models</li>
+                                <li>Was responsible for supporting the growth and professional development of the team.</li>
+                            </ul>
+
+                        </Typography>
+                    </TimelineContent>
+                </TimelineItem>
+                <TimelineItem>
+                    <TimelineSeparator>
+                        <TimelineConnector />
+                        <TimelineDot color="primary" variant="outlined" sx={{ width: "70px", height: "70px", overflow: "hidden", border: "2px solid #bdbdbd", padding: "0px" }}>
+                            <Image
+                                src={perphoto}
+                                alt="Picture of the author"
+                                width={60}
+                                height={60}
+                            />
+                        </TimelineDot>
+                        <TimelineConnector sx={{ height: "150px" }} />
                     </TimelineSeparator>
                     <TimelineContent sx={{ py: '12px', px: 2 }}>
                         <Typography variant='subtitle1' sx={{ color: "text.secondary" }}>July 2021 ‐ Jan 2022</Typography>
@@ -128,7 +159,7 @@ function Timelinemobileview() {
                                 height={60}
                             />
                         </TimelineDot>
-                        <TimelineConnector sx={{ height: "400px" }} />
+                        <TimelineConnector sx={{ height: "230px" }} />
                     </TimelineSeparator>
                     <TimelineContent sx={{ py: '12px', px: 2 }}>
                         <Typography variant='subtitle1' sx={{ color: "text.secondary" }}>Dec 2020 ‐ July 2021</Typography>
@@ -138,10 +169,12 @@ function Timelinemobileview() {
                         </Typography>
                         <Typography variant='subtitle1' sx={{ fontWeight: "bold" }}>Bergen, Norway ‐ Remote</Typography>
                         <Typography variant='subtitle1'>
-                            • Worked on a research project to create a deep learning model to detect gene‐gene
-                            interactions from gene expression data.<br />
-                            • Used findr tool to preprocess yeast gene expressions.<br />
-                            • Responsible for designing, training, and evaluating the performance of the deep learning model.</Typography>
+                            <ul>
+                                <li>Worked on a research project to create a deep learning model to detect gene‐gene
+                                    interactions from gene expression data.</li>
+                                <li>Used findr tool to preprocess yeast gene expressions.</li>
+                                <li> Responsible for designing, training, and evaluating the performance of the deep learning model.</li>
+                            </ul></Typography>
                     </TimelineContent>
                 </TimelineItem>
                 <TimelineItem>
@@ -156,7 +189,7 @@ function Timelinemobileview() {
                                 height={50}
                             />
                         </TimelineDot>
-                        <TimelineConnector sx={{ height: "450px" }} />
+                        <TimelineConnector sx={{ height: "300px" }} />
                     </TimelineSeparator>
                     <TimelineContent sx={{ py: '12px', px: 2 }}>
                         <Typography variant='subtitle1' sx={{ color: "text.secondary" }}>March 2021 ‐ June 2021</Typography>
@@ -187,7 +220,7 @@ function Timelinemobileview() {
                                 height={50}
                             />
                         </TimelineDot>
-                        <TimelineConnector sx={{ height: "580px" }} />
+                        <TimelineConnector sx={{ height: "400px" }} />
                     </TimelineSeparator>
                     <TimelineContent sx={{ py: '12px', px: 2 }}>
                         <Typography variant='subtitle1' sx={{ color: "text.secondary" }}>Oct 2020 ‐ Feb 2021</Typography>
@@ -228,12 +261,16 @@ function Timelinemobileview() {
                     </TimelineSeparator>
                     <TimelineContent sx={{ py: '12px', px: 2 }}>
                         <Typography variant='subtitle1' sx={{ color: "text.secondary" }}>Sep 2015 ‐ Aug 2020</Typography>
+                        <Typography variant='h5' sx={{ fontWeight: "bold" }}>B.SC in electronics and communication engineering</Typography>
                         <Typography variant="h5" component="span" sx={{ color: "secondary.main", fontWeight: "bold" }}>
                             Faculty of Engineering
                         </Typography>
                         <Typography variant='subtitle1' sx={{ fontWeight: "bold" }}>Alexandria</Typography>
-                        <Typography variant='subtitle1'>B.SC in electronics and communication engineering
-                            <br />• Cumulative Grade: 72.8% (Good).</Typography>
+                        <Typography variant='subtitle1'>
+                            <ul>
+                                <li>Cumulative Grade: 72.8% (Good)</li>
+                            </ul>
+                        </Typography>
                     </TimelineContent>
                 </TimelineItem>
             </Timeline>

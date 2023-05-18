@@ -316,37 +316,37 @@ function Nav(props) {
                             <Box className={open ? Styles.menuBoxactive : Styles.menuBox} variant="permanent" BackdropProps={{ invisible: false }}>
                                 {open && (
                                     <List  >
-                                        <ListItem>
-                                            <Link to="about" spy={true} smooth={true} offset={-50} duration={500} >
+                                        <ListItem className={Styles.navLink2}>
+                                            <NavLinks to="about" spy={true} smooth={true} offset={-50} duration={500} >
                                                 <ListItemText primary="ABOUT" />
-                                            </Link>
+                                            </NavLinks>
                                         </ListItem>
-                                        <ListItem>
-                                            <Link to="skill" spy={true} smooth={true} offset={-50} duration={500} >
+                                        <ListItem className={Styles.navLink2}>
+                                            <NavLinks to="skill" spy={true} smooth={true} offset={-50} duration={500} >
                                                 <ListItemText primary="SKILLS" />
-                                            </Link>
+                                            </NavLinks>
                                         </ListItem>
-                                        <ListItem>
-                                            <Link to="projects" spy={true} smooth={true} offset={-50} duration={500}>
+                                        <ListItem className={Styles.navLink2}>
+                                            <NavLinks to="projects" spy={true} smooth={true} offset={-50} duration={500}>
                                                 <ListItemText primary="PROJECTS" />
-                                            </Link>
+                                            </NavLinks>
                                         </ListItem>
-                                        <ListItem>
-                                            <Link to="papers" spy={true} smooth={true} offset={-50} duration={500}>
+                                        <ListItem className={Styles.navLink2}>
+                                            <NavLinks to="papers" spy={true} smooth={true} offset={-50} duration={500}>
                                                 <ListItemText primary="PAPERS" />
-                                            </Link>
+                                            </NavLinks>
                                         </ListItem>
-                                        <ListItem>
-                                            <Link to="timeline" spy={true} smooth={true} offset={-50} duration={500} >
+                                        <ListItem className={Styles.navLink2}>
+                                            <NavLinks to="timeline" spy={true} smooth={true} offset={-50} duration={500} >
                                                 <ListItemText primary="TIMELINE" />
-                                            </Link>
+                                            </NavLinks>
                                         </ListItem>
-                                        <ListItem>
-                                            <Link to="contact" spy={true} smooth={true} offset={-50} duration={500}>
+                                        <ListItem className={Styles.navLink2}>
+                                            <NavLinks to="contact" spy={true} smooth={true} offset={-50} duration={500}>
                                                 <ListItemText primary="CONTACT" />
-                                            </Link>
+                                            </NavLinks>
                                         </ListItem>
-                                        <ListItem>
+                                        <ListItem className={Styles.navLink2}>
                                             < AiOutlineFilePdf style={{ color: "white", marginRight: "5px" }} />
                                             <a href="https://drive.google.com/file/d/104BElFusWYq6HvrSFBAB7fCKLfOo-3zg/view" target="_blank">
                                                 <ListItemText primary="RESUME" />
