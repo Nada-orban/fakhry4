@@ -33,7 +33,7 @@ function Contact() {
     const colorMode = React.useContext(ColorModeContext);
     const theme = useTheme();
     return (
-        <Box id="contact" py="50px" className={styles.contactBox}>
+        <Box id="contact" py="80px" className={styles.contactBox} height="90vh">
             <Container>
                 <Typography variant='h2' sx={{ textAlign: "center", fontWeight: "bold", my: 4 }}>Contact Me</Typography>
                 <Box display="flex" justifyContent="center" justifyItems="center">
@@ -53,7 +53,7 @@ function Contact() {
                 <Typography variant='h6' sx={{ mt: 4, color: "text.whitegray" }}>...or use the following form</Typography>
                 <form onSubmit={handleSubmit}  >
                     <Grid container spacing={4} sx={{ my: 2 }}>
-                        <Grid item xs={12} md={6} sx={{ display: "flex", flexDirection: "column", justifyContent: "space-between", gap: "40px" }}>
+                        <Grid item xs={12} md={6} sx={{ display: "flex", flexDirection: "column", justifyContent: "space-between", gap: "5px" }}>
                             {/* <TextField
                                 variant="filled"
                                 label="Name"
@@ -123,6 +123,34 @@ function Contact() {
                                 field="email"
                                 errors={state.errors}
                             />
+                            <TextField
+                                // sx={{ '& .css-14m6kzo-MuiInputBase-root-MuiFilledInput-root.Mui-focused': { backgroundColor: "neutral.white" } }}
+                                id="subject"
+                                name="subject"
+                                type="subject"
+                                label="subject"
+                                variant="filled"
+                                color="secondary"
+                                style={{
+                                    backgroundColor: "white"
+                                }}
+                                InputProps={{
+                                    style: {
+                                        color: "black"
+                                    }
+                                }}
+                                f
+
+
+
+
+                            />
+                            <ValidationError
+                                prefix="subject"
+                                field="subject"
+                                errors={state.errors}
+                            />
+
 
 
 
@@ -140,7 +168,7 @@ function Contact() {
                                 color="secondary"
                                 variant="filled"
                                 multiline
-                                rows={6}
+                                rows={8}
 
                                 style={{
                                     backgroundColor: "white"
