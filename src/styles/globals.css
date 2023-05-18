@@ -26,6 +26,8 @@ body {
 
 body {
   color: rgb(var(--foreground-rgb));
+  overflow: hidden;
+  margin:0
  
 }
 

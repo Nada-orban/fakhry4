@@ -56,7 +56,7 @@ function Landing() {
                     </Box>
 
                 </Box>
-                <Box justifyContent="center" mt="100px" sx={{ display: { xs: "none", md: "flex" } }}>
+                <Box justifyContent="center" mt="80px" sx={{ display: { xs: "none", md: "flex" } }}>
                     <Link to="about" spy={true} smooth={true} offset={-50} duration={500} >
                         <KeyboardDoubleArrowDownIcon sx={{
                             width: "50px", height: "50px", color: "secondary.main",

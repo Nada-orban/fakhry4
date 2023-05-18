@@ -9,9 +9,10 @@
   width: 100vw;
   height: 100vh;
   position: relative;
+  overflow: hidden;
 }
 .landingInfoBox{
-  padding-top: 20vh;
+  padding-top: 10vh;
 }
 .mylink{
   border-bottom: 1px solid #616161;
