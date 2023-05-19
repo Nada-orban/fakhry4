@@ -35,11 +35,11 @@
   
 }
   .landingname {
-    font-size: 100px;
+    font-size: 100px!important;
   }
   
   .landingtext {
-    font-size: 40px;
+    font-size: 40px !important;
   }
   .colorfont{color:var(--secondary-color);}
 
@@ -52,10 +52,10 @@
 
   }
   .landingname{
-    font-size: 40px;
+    font-size: 40px !important;
   }
   .landingtext{
-    font-size: 20px;
+    font-size: 20px !important;
   }
 }
 @media (min-width:480px) and (max-width:900px) {
@@ -68,11 +68,11 @@
   }
 
   .landingname {
-    font-size: 60px;
+    font-size: 60px !important;
   }
 
   .landingtext {
-    font-size: 30px;
+    font-size: 30px !important;
   }
 }
 
@@ -124,7 +124,41 @@
 
 
 /*###################projects############*/
-.projectBox{
+.projectBox {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 300px;
+
+
+
+
+}
+
+
+.boximage {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  opacity: 1;
+
+
+
+
+}
+.boxbody{
+  position: absolute;
+  z-index: 4;
+  transition: .5s ease;
+  top: 20%;
+  left: 0%;
+  text-align: center;
+  width: 100%;
+  height: 100px;
+  text-align: start;
+  padding: 15px;
+} 
+/* .projectBox{
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 'center';
@@ -133,10 +167,10 @@
   height: 250px;
   padding: 50px 20px;
   color: white;
-  /* border-radius: 10px; */
+  border-radius: 10px;
   transition: all .5s ease-in-out;
   
-}
+} */
 .projectBox:hover{
   transform: scale(.9);
   background-image:linear-gradient(to bottom, #00000080, rgba(24, 163, 218, 0.829)),

@@ -6,16 +6,22 @@ import { styled, useTheme, alpha } from '@mui/material/styles';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import Link from 'next/link'
 
-function Projects({ id, title, body, pdf, code, poster }) {
+function Projects({ id, title, body, pdf, code, poster, image }) {
     const colorMode = React.useContext(ColorModeContext);
     const theme = useTheme();
     return (
 
-        <Grid item xs={12} md={4}>
+        <Grid item xs={12} md={6}>
             <Link href={`/projects/[id]`} as={`/projects/${id}`} key={id} passHref>
                 <Box className={styles.projectBox}>
-                    <Typography variant='h5' sx={{ color: "secondary.main" }}>{title}</Typography>
-                    <Typography variant='h6'>{body}</Typography>
+                    <img src={image} alt='' className={styles.boximage} />
+                    {/* <Box className={styles.boxtext}>
+                        <Typography variant='subtitle1'>VIEW PROJECT</Typography>
+                    </Box> */}
+                    <Box className={styles.boxbody}> <Typography variant='h5' sx={{ color: "secondary.main" }}>{title}</Typography>
+                        <Typography variant='h6'>{body}</Typography></Box>
+
+
                 </Box>
             </Link>
         </Grid >
