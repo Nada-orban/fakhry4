@@ -3,8 +3,8 @@ export const projectsdata = [{
 
     "id": 1,
     "title": "Digital Eye",
-    "body": "DEEP LEARNiNG ‐ CLOSED SOURCE",
-    "image": "https://via.placeholder.com/600/92c952",
+    "body": "DEEP LEARNING ‐ CLOSED SOURCE",
+    "image": "https://static.vecteezy.com/system/resources/previews/002/551/051/original/eye-cyber-circuit-future-technology-concept-background-free-vector.jpg",
     "pdf": "",
     "code": "",
     "poster": ""
@@ -12,8 +12,8 @@ export const projectsdata = [{
 {
     "id": 2,
     "title": "Automated Interpretation of MRI‐Images",
-    "body": "DEEP LEARNiNG ‐ OPEN SOURCE",
-    "image": "https://via.placeholder.com/600/771796",
+    "body": "DEEP LEARNING ‐ OPEN SOURCE",
+    "image": "https://news.stanford.edu/wp-content/uploads/2017/10/bids.jpg",
     "pdf": "",
     "code": "",
     "poster": ""
@@ -21,8 +21,8 @@ export const projectsdata = [{
 {
     "id": 3,
     "title": "Reviews to Stars",
-    "body": "DEEP LEARNiNG ‐ OPEN SOURCE",
-    "image": "https://via.placeholder.com/600/92c952",
+    "body": "DEEP LEARNING ‐ OPEN SOURCE",
+    "image": "https://www.bu.edu/questrom/files/2018/10/Four-Star-Reviews-Daniella-Kupor.jpg",
     "pdf": "",
     "code": "",
     "poster": ""
@@ -30,8 +30,8 @@ export const projectsdata = [{
 {
     "id": 4,
     "title": "You Only Look Faster ‐ Object Detection Model",
-    "body": "DEEP LEARNiNG ‐ BACHELOR’S GRADUATiON PROJECT",
-    "image": "https://via.placeholder.com/600/92c952",
+    "body": "DEEP LEARNING ‐ BACHELOR’S GRADUATiON PROJECT",
+    "image": "https://dagshub.com/blog/content/images/size/w2000/2022/06/0_IW_DpAtoCrDBVhdO.png",
     "pdf": "",
     "code": "",
     "poster": ""
