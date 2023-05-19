@@ -33,7 +33,7 @@ function Contact() {
     const colorMode = React.useContext(ColorModeContext);
     const theme = useTheme();
     return (
-        <Box id="contact" py="80px" className={styles.contactBox} height="90vh">
+        <Box id="contact" pb="150px" pt="150px" className={styles.contactBox} height="100%">
             <Container>
                 <Typography variant='h2' sx={{ textAlign: "center", fontWeight: "bold", my: 4 }}>Contact Me</Typography>
                 <Box display="flex" justifyContent="center" justifyItems="center">
@@ -128,7 +128,7 @@ function Contact() {
                                 id="subject"
                                 name="subject"
                                 type="subject"
-                                label="subject"
+                                label="Subject"
                                 variant="filled"
                                 color="secondary"
                                 style={{
@@ -159,7 +159,7 @@ function Contact() {
 
 
                         </Grid>
-                        <Grid item xs={12} md={6} sx={{ display: "flex", flexDirection: "column", justifyContent: "space-between", gap: "40px" }}>
+                        <Grid item xs={12} md={6} sx={{ display: "flex", flexDirection: "column", justifyContent: "space-between", gap: "10px" }}>
                             <TextField
 
                                 id="message"

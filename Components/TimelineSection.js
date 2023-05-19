@@ -244,12 +244,12 @@ function TimelineSection() {
                     <TimelineItem>
                         <TimelineSeparator>
                             <TimelineConnector />
-                            <TimelineDot color="primary" variant="outlined" sx={{ width: "150px", height: "150px", overflow: "hidden", border: "2px solid #bdbdbd", padding: "15px" }}>
+                            <TimelineDot color="primary" variant="outlined" sx={{ width: "150px", height: "150px", overflow: "hidden", border: "2px solid #bdbdbd", padding: " 20px 33px" }}>
                                 <Image
                                     src={alexunversity}
                                     alt="Picture of the author"
-                                    width={130}
-                                    height={130}
+                                    width={80}
+                                // height={130}
                                 />
                             </TimelineDot>
                             <TimelineConnector />

@@ -43,6 +43,29 @@
 
 
   }
+  .landingname{
+    font-size: 40px;
+  }
+  .landingtext{
+    font-size: 20px;
+  }
+}
+@media (min-width:480px) and (max-width:900px) {
+
+  .landingInfoBox {
+    padding-top: 18vh;
+
+
+
+  }
+
+  .landingname {
+    font-size: 60px;
+  }
+
+  .landingtext {
+    font-size: 30px;
+  }
 }
 
 .arrow {
@@ -153,6 +176,7 @@
   background-position: center;
   background-size: cover;
   width: 100%;
+  overflow: hidden;
   
 
 }
@@ -162,6 +186,7 @@
   margin: auto;
   padding: 20px;
   margin-top: 30px;
+  
   font-size: larger;
   background-color: var(--primary-color);
   border-style: none;
