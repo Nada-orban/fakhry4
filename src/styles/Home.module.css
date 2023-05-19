@@ -200,6 +200,31 @@
   transition: all 1s ease-in-out;
 }
 
+.projecttext{
+  font-size: 25px;
+  font-weight: bold;
+
+}
+.projectbody{
+  font-size: 18px;
+
+}
+@media (max-width:480px) {
+  .projecttext {
+    font-size: 20px;
+  
+  }
+  
+  .projectbody {
+    font-size: 15px;
+  
+  }
+  .boxbody{
+    height: 120px;
+  }
+
+}
+
 
 /*############Papers############ */
 .linkText:hover{
