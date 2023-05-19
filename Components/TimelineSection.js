@@ -20,11 +20,11 @@ import { FcGoogle } from 'react-icons/fc'
 import Image from 'next/image'
 import alexunversity from '../public/assets/download.jpeg'
 import { NoEncryption } from '@mui/icons-material';
-import openaiphoto from '../public/assets/timeline/1681039084chatgpt-icon.png'
+import openaiphoto from '../public/assets/timeline/OpenAI_Logo_(2).svg.png'
 import perphoto from '../public/assets/timeline/download.jpeg'
 import bergenphoto from '../public/assets/timeline/Uni-Bergen-emblem.png'
 import virufyphoto from '../public/assets/timeline/virufy-logo-white-brackground-small.webp'
-import Liverpoolphoto from '../public/assets/timeline/Liverpool-John-Moores.png'
+import Liverpoolphoto from '../public/assets/timeline/BGSv3kJng1H9mI284fawGs-myAkwLMBW.png'
 import Timelinemobileview from './Timelinemobileview';
 
 function TimelineSection() {
@@ -38,11 +38,11 @@ function TimelineSection() {
                 <Timeline position="alternate" sx={{ my: 5, display: { xs: "none", sm: "block" } }}>
                     <TimelineItem>
                         <TimelineSeparator >
-                            <TimelineDot color="primary" variant="outlined" sx={{ width: "150px", height: "150px", overflow: "hidden", border: "2px solid #bdbdbd", padding: "0px" }}>
+                            <TimelineDot color="primary" variant="outlined" sx={{ width: "150px", height: "150px", overflow: "hidden", border: "2px solid #bdbdbd", padding: "15px 5px" }}>
                                 <Image
                                     src={openaiphoto}
                                     alt="Picture of the author"
-                                    width={150}
+                                    width={130}
 
                                 />
                             </TimelineDot>
@@ -64,11 +64,11 @@ function TimelineSection() {
                     </TimelineItem>
                     <TimelineItem>
                         <TimelineSeparator >
-                            <TimelineDot color="primary" variant="outlined" sx={{ width: "150px", height: "150px", overflow: "hidden", border: "2px solid #bdbdbd", padding: "0px" }}>
+                            <TimelineDot color="primary" variant="outlined" sx={{ width: "150px", height: "150px", overflow: "hidden", border: "2px solid #bdbdbd", padding: "11px 5px" }}>
                                 <Image
                                     src={Liverpoolphoto}
                                     alt="Picture of the author"
-                                    width={150}
+                                    width={110}
 
                                 />
                             </TimelineDot>
@@ -146,12 +146,12 @@ function TimelineSection() {
                     <TimelineItem>
                         <TimelineSeparator>
                             <TimelineConnector />
-                            <TimelineDot color="primary" variant="outlined" sx={{ width: "150px", height: "150px", overflow: "hidden", border: "2px solid #bdbdbd", padding: "4px" }}>
+                            <TimelineDot color="primary" variant="outlined" sx={{ width: "150px", height: "150px", overflow: "hidden", border: "2px solid #bdbdbd", padding: "6px 4px" }}>
                                 <Image
                                     src={bergenphoto}
                                     alt="Picture of the author"
                                     width={140}
-                                    height={140}
+
                                 />
                             </TimelineDot>
                             <TimelineConnector sx={{ height: "180px" }} />
@@ -178,7 +178,7 @@ function TimelineSection() {
                         <TimelineSeparator>
                             <TimelineConnector />
                             <TimelineConnector />
-                            <TimelineDot color="primary" variant="outlined" sx={{ width: "150px", height: "150px", overflow: "hidden", border: "2px solid #bdbdbd", padding: "40px 20px" }}>
+                            <TimelineDot color="primary" variant="outlined" sx={{ width: "150px", height: "150px", overflow: "hidden", border: "2px solid #bdbdbd", padding: "40px 13px" }}>
                                 <Image
                                     src={virufyphoto}
                                     alt="Picture of the author"
@@ -208,7 +208,7 @@ function TimelineSection() {
                     <TimelineItem>
                         <TimelineSeparator>
                             <TimelineConnector />
-                            <TimelineDot color="primary" variant="outlined" sx={{ width: "150px", height: "150px", overflow: "hidden", border: "2px solid #bdbdbd", padding: "40px 20px" }}>
+                            <TimelineDot color="primary" variant="outlined" sx={{ width: "150px", height: "150px", overflow: "hidden", border: "2px solid #bdbdbd", padding: "40px 13px" }}>
                                 <Image
                                     src={virufyphoto}
                                     alt="Picture of the author"

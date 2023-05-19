@@ -20,11 +20,11 @@ import { FcGoogle } from 'react-icons/fc'
 import Image from 'next/image'
 import alexunversity from '../public/assets/download.jpeg'
 import { NoEncryption } from '@mui/icons-material';
-import openaiphoto from '../public/assets/timeline/1681039084chatgpt-icon.png'
+import openaiphoto from '../public/assets/timeline/OpenAI_Logo_(2).svg.png'
 import perphoto from '../public/assets/timeline/download.jpeg'
 import bergenphoto from '../public/assets/timeline/Uni-Bergen-emblem.png'
 import virufyphoto from '../public/assets/timeline/virufy-logo-white-brackground-small.webp'
-import Liverpoolphoto from '../public/assets/timeline/Liverpool-John-Moores.png'
+import Liverpoolphoto from '../public/assets/timeline/BGSv3kJng1H9mI284fawGs-myAkwLMBW.png'
 
 function Timelinemobileview() {
     return (
@@ -38,11 +38,11 @@ function Timelinemobileview() {
             }} >
                 <TimelineItem>
                     <TimelineSeparator >
-                        <TimelineDot color="primary" variant="outlined" sx={{ width: "70px", height: "70px", overflow: "hidden", border: "2px solid #bdbdbd", padding: "0px" }}>
+                        <TimelineDot color="primary" variant="outlined" sx={{ width: "70px", height: "70px", overflow: "hidden", border: "2px solid #bdbdbd", padding: "5px 2px" }}>
                             <Image
                                 src={openaiphoto}
                                 alt="Picture of the author"
-                                width={70}
+                                width={60}
 
                             />
                         </TimelineDot>
@@ -64,11 +64,11 @@ function Timelinemobileview() {
                 </TimelineItem>
                 <TimelineItem>
                     <TimelineSeparator >
-                        <TimelineDot color="primary" variant="outlined" sx={{ width: "70px", height: "70px", overflow: "hidden", border: "2px solid #bdbdbd", padding: "0px" }}>
+                        <TimelineDot color="primary" variant="outlined" sx={{ width: "70px", height: "70px", overflow: "hidden", border: "2px solid #bdbdbd", padding: "7px 2px" }}>
                             <Image
                                 src={Liverpoolphoto}
                                 alt="Picture of the author"
-                                width={70}
+                                width={50}
 
                             />
                         </TimelineDot>
@@ -91,12 +91,12 @@ function Timelinemobileview() {
                 <TimelineItem>
                     <TimelineSeparator>
                         <TimelineConnector />
-                        <TimelineDot color="primary" variant="outlined" sx={{ width: "70px", height: "70px", overflow: "hidden", border: "2px solid #bdbdbd", padding: "0px" }}>
+                        <TimelineDot color="primary" variant="outlined" sx={{ width: "70px", height: "70px", overflow: "hidden", border: "2px solid #bdbdbd", padding: " 5px 0px" }}>
                             <Image
                                 src={perphoto}
                                 alt="Picture of the author"
                                 width={60}
-                                height={60}
+
                             />
                         </TimelineDot>
                         <TimelineConnector sx={{ height: "340px" }} />
@@ -125,12 +125,12 @@ function Timelinemobileview() {
                 <TimelineItem>
                     <TimelineSeparator>
                         <TimelineConnector />
-                        <TimelineDot color="primary" variant="outlined" sx={{ width: "70px", height: "70px", overflow: "hidden", border: "2px solid #bdbdbd", padding: "0px" }}>
+                        <TimelineDot color="primary" variant="outlined" sx={{ width: "70px", height: "70px", overflow: "hidden", border: "2px solid #bdbdbd", padding: "5px 0px" }}>
                             <Image
                                 src={perphoto}
                                 alt="Picture of the author"
                                 width={60}
-                                height={60}
+
                             />
                         </TimelineDot>
                         <TimelineConnector sx={{ height: "150px" }} />
@@ -156,7 +156,7 @@ function Timelinemobileview() {
                                 src={bergenphoto}
                                 alt="Picture of the author"
                                 width={60}
-                                height={60}
+
                             />
                         </TimelineDot>
                         <TimelineConnector sx={{ height: "230px" }} />
@@ -181,12 +181,12 @@ function Timelinemobileview() {
                     <TimelineSeparator>
                         <TimelineConnector />
                         <TimelineConnector />
-                        <TimelineDot color="primary" variant="outlined" sx={{ width: "70px", height: "70px", overflow: "hidden", border: "2px solid #bdbdbd", padding: "5px" }}>
+                        <TimelineDot color="primary" variant="outlined" sx={{ width: "70px", height: "70px", overflow: "hidden", border: "2px solid #bdbdbd", padding: "15px 2px" }}>
                             <Image
                                 src={virufyphoto}
                                 alt="Picture of the author"
-                                width={50}
-                                height={50}
+                                width={60}
+
                             />
                         </TimelineDot>
                         <TimelineConnector sx={{ height: "300px" }} />
@@ -212,12 +212,12 @@ function Timelinemobileview() {
                 <TimelineItem>
                     <TimelineSeparator>
                         <TimelineConnector />
-                        <TimelineDot color="primary" variant="outlined" sx={{ width: "70px", height: "70px", overflow: "hidden", border: "2px solid #bdbdbd", padding: "5px" }}>
+                        <TimelineDot color="primary" variant="outlined" sx={{ width: "70px", height: "70px", overflow: "hidden", border: "2px solid #bdbdbd", padding: "15px 2px" }}>
                             <Image
                                 src={virufyphoto}
                                 alt="Picture of the author"
-                                width={50}
-                                height={50}
+                                width={60}
+
                             />
                         </TimelineDot>
                         <TimelineConnector sx={{ height: "400px" }} />
@@ -248,12 +248,12 @@ function Timelinemobileview() {
                 <TimelineItem>
                     <TimelineSeparator>
 
-                        <TimelineDot color="primary" variant="outlined" sx={{ width: "70px", height: "70px", overflow: "hidden", border: "2px solid #bdbdbd", padding: "15px" }}>
+                        <TimelineDot color="primary" variant="outlined" sx={{ width: "70px", height: "70px", overflow: "hidden", border: "2px solid #bdbdbd", padding: "8px 13px" }}>
                             <Image
                                 src={alexunversity}
                                 alt="Picture of the author"
-                                width={60}
-                                height={60}
+                                width={38}
+
                             />
                         </TimelineDot>
 
