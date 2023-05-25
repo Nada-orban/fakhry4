@@ -68,14 +68,15 @@ function About() {
                     </Grid>
                     <Grid item md={8} xs={12} sx={{ padding: "0px 0px", mt: 4, color: "text.primary" }} >
                         <Typography variant='h4' sx={{ fontWeight: "bolder" }}>Ahmed Fakhry</Typography>
-                        <Typography variant='h5' sx={{ my: 2, fontWeight: "bold", }} data-aos="fade-left" data-aos-delay="500">
-                            MIT '18, M.Eng. Student, Software Engineer, and AI/ML Researcher
-                        </Typography>
+                        {/* <Typography variant='h5' sx={{ my: 2, fontWeight: "bold", }} data-aos="fade-left" data-aos-delay="500">
+                            Machine Learning Developer at OpenAI
+                        </Typography> */}
                         <Typography variant='h6' sx={{ my: 3, color: "text.secondary" }} data-aos="fade-left" data-aos-once="true" >
-                            I'm a graduate of MIT's Class of 2018 and my passion is Computer Science.
-                            My interests include software design and development, artificial intelligence, machine learning, computer vision, and natural language processing.
+                            I'm a Senior Data Scientist with 3+ years of experience in developing machine learning models and AI research. I am also masters student of computing systems at Liverpool John Moores University. I love working with data and finding insights that can drive business decisions. Check out my work and skills below, and feel free to contact me!
+
+
                         </Typography>
-                        <Typography variant='h6' sx={{ color: "text.secondary" }}>I'm currently a graduate student working towards my Master of Engineering (M.Eng.) degree in Computer Science/Artificial Intelligence.</Typography>
+                        {/* <Typography variant='h6' sx={{ color: "text.secondary" }}>I'm currently a graduate student working towards my Master of Engineering (M.Eng.) degree in Computer Science/Artificial Intelligence.</Typography> */}
                         <List >
                             <Typography variant='h4' sx={{ my: 1, fontWeight: "bold" }} >Education</Typography>
                             <ListItem display="flex" justifyContent="center" alignItems='center'>
