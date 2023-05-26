@@ -132,7 +132,7 @@ function Nav2(props) {
             <Box sx={{ display: 'flex' }} >
                 <CssBaseline />
                 <AppBar variant="permanent" position="fixed" sx={{
-                    background: 'black', color: "text:primary", borderStyle: "none", height: "60px", zIndex: '1400',
+                    background: 'black', color: "text.primary", borderStyle: "none", height: "60px", zIndex: '1400',
                 }} >
                     <Container>
                         <Toolbar>
