@@ -205,7 +205,7 @@ function Nav(props) {
                 <CssBaseline />
 
                 <AppBar variant="permanent" position="fixed" sx={{
-                    color: "text:primary", borderStyle: "none", height: "60px", background: "transparent"
+                    color: "text.primary", borderStyle: "none", height: "60px", background: "transparent", zIndex: 50
                 }} className={navbar ? Styles.Appbaractive : Styles.Appbar}>
                     <Container>
                         <Toolbar>
